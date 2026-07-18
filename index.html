@@ -96,17 +96,201 @@
 .wechat-fallback button{background:var(--lime);color:var(--ink);border:0;border-radius:10px;padding:0 18px;font-weight:800;font-size:14px;cursor:pointer;white-space:nowrap}
 .wechat-fallback button:hover{background:#fff}
 .wechat-bonus{color:#c7ff22cc;margin:14px 0 0;font-size:11px;letter-spacing:.02em}
-@media(max-width:720px){.wechat-fab{padding:13px 17px;font-size:14px;right:16px;bottom:16px}.wechat-qr img{width:190px;height:190px}.wechat-modal-card{padding:32px 20px 22px}.modal-value{gap:6px}}</style>
+@media(max-width:720px){.wechat-fab{padding:13px 17px;font-size:14px;right:16px;bottom:16px}.wechat-qr img{width:190px;height:190px}.wechat-modal-card{padding:32px 20px 22px}.modal-value{gap:6px}}
+/* ===== AI 赋能中心 · 绿系 UI ===== */
+.ai-center{position:relative;padding:84px 24px;max-width:1120px;margin:0 auto}
+.ai-head{text-align:center;margin-bottom:38px}
+.ai-kicker{color:var(--lime);letter-spacing:.22em;font:700 12px Barlow Condensed;text-transform:uppercase}
+.ai-title{color:#fff;font-size:clamp(28px,5vw,44px);font-weight:900;line-height:1.15;margin:12px 0 10px;letter-spacing:-.02em}
+.ai-title em{color:var(--lime);font-style:normal}
+.ai-sub{color:#aab2aa;font-size:15px;max-width:620px;margin:0 auto;line-height:1.7}
+
+.ai-tabs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:34px}
+.ai-tab{border:1px solid #ffffff26;background:#12151280;color:#cfd6cf;font:700 15px/1 Barlow Condensed,"Noto Sans SC",sans-serif;padding:12px 20px;border-radius:50px;cursor:pointer;transition:.2s}
+.ai-tab:hover{border-color:#c7ff2255;color:#fff}
+.ai-tab.active{background:var(--lime);color:var(--ink);border-color:var(--lime);box-shadow:0 6px 24px #c7ff2244}
+
+/* 筛选条 */
+.filter-chip{border:1px solid #ffffff26;background:#12151280;color:#cfd6cf;font:600 13px/1 "Noto Sans SC",sans-serif;padding:8px 15px;border-radius:40px;cursor:pointer;margin:0 6px 12px 0;transition:.18s}
+.filter-chip:hover{color:#fff;border-color:#c7ff2255}
+.filter-chip.active{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:16px}
+.career-card{background:#121512;background:linear-gradient(160deg,#14171480,#0e100e80);border:1px solid #ffffff1f;border-radius:16px;padding:20px;display:flex;flex-direction:column}
+.career-cat-tag{font:700 12px/1 "Noto Sans SC",sans-serif;margin-bottom:8px}
+.career-title{color:#fff;font-size:18px;font-weight:800;margin:0 0 8px}
+.career-desc{color:#aab2aa;font-size:13px;line-height:1.6;margin:0 0 12px;flex:1}
+.career-salary{color:var(--lime);font:800 16px/1 Barlow Condensed;margin-bottom:12px}
+.career-meta{display:flex;gap:18px;margin-bottom:12px}
+.meta-item{display:flex;flex-direction:column;gap:3px}
+.meta-label{color:#7a827a;font-size:11px}
+.meta-val{color:#e8ffe8;font-size:13px;font-weight:700}
+.career-skills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.skill-tag{background:#1c1e1b;border:1px solid #ffffff1f;color:#cfd6cf;font-size:11px;padding:4px 9px;border-radius:20px}
+.career-path{background:#0e100e60;border-radius:10px;padding:12px;margin-bottom:4px}
+.path-label{color:#c7ff22cc;font-size:11px;font-weight:700;margin-bottom:8px}
+.path-step{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:#cfd6cf;margin-bottom:6px;line-height:1.4}
+.step-num{flex:0 0 18px;height:18px;width:18px;background:var(--lime);color:var(--ink);border-radius:50%;font:800 11px/18px Barlow Condensed;text-align:center}
+.money-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.money-stat{background:#0e100e60;border-radius:8px;padding:8px 10px}
+.ms-label{display:block;color:#7a827a;font-size:10px;margin-bottom:3px}
+.ms-val{color:#e8ffe8;font-size:13px;font-weight:700}
+.money-case{display:flex;gap:8px;background:#0e100e60;border-radius:8px;padding:10px;font-size:12px;color:#aab2aa;line-height:1.5;margin-bottom:4px}
+.case-icon{color:var(--lime)}
+
+/* 测验 */
+.quiz-progress{height:6px;background:#ffffff1a;border-radius:6px;overflow:hidden;margin-bottom:10px}
+.quiz-progress-bar{height:100%;background:var(--lime);border-radius:6px;transition:.3s}
+.quiz-step{color:#7a827a;font-size:12px;margin-bottom:14px;text-align:center}
+.quiz-question{color:#fff;font-size:19px;font-weight:800;line-height:1.4;margin:0 0 18px;text-align:center}
+.quiz-options{display:flex;flex-direction:column;gap:10px}
+.quiz-option{background:#1c1e1b;border:1px solid #ffffff1f;color:#e8ffe8;font:600 14px/1.4 "Noto Sans SC",sans-serif;padding:14px 16px;border-radius:12px;cursor:pointer;text-align:left;transition:.18s}
+.quiz-option:hover{border-color:var(--lime);background:#c7ff2212;transform:translateX(3px)}
+.quiz-result-card{background:#0e100e80;border:1px solid #ffffff1f;border-radius:12px;padding:14px;margin-bottom:10px;text-align:left}
+.qr-title{color:#fff;font-weight:800;font-size:15px}
+.qr-salary{color:var(--lime);font:700 14px Barlow Condensed;margin:4px 0}
+.qr-desc{color:#aab2aa;font-size:12px;line-height:1.5}
+
+/* 计算器 */
+.calc-form{max-width:560px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.calc-field{display:flex;flex-direction:column;gap:6px}
+.calc-field label{color:#cfd6cf;font-size:13px;font-weight:600}
+.form-select{background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:10px;padding:11px 12px;font-size:14px;outline:none}
+.form-select:focus{border-color:var(--lime)}
+.calc-result{margin-top:26px;text-align:left}
+.calc-result-banner{display:flex;gap:14px;align-items:center;background:#0e100e80;border:1px solid #c7ff2240;border-radius:14px;padding:16px 18px;margin-bottom:18px}
+.calc-income-label{color:#7a827a;font-size:12px}
+.calc-income-val{color:#fff;font-weight:800;margin:4px 0}
+.calc-income-note{color:#aab2aa;font-size:11px;line-height:1.5}
+.calc-rec-card{display:flex;gap:14px;background:#12151280;border:1px solid #ffffff1f;border-radius:14px;padding:16px;margin-bottom:12px}
+.rec-rank{flex:0 0 34px;height:34px;width:34px;border-radius:10px;font:800 18px/34px Barlow Condensed;text-align:center;color:var(--ink)}
+.rank-1{background:var(--lime)}.rank-2{background:#00d4ff}.rank-3{background:#ffc107}
+.rec-content{flex:1}
+.rec-header{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px}
+.rec-cat{font-weight:800;font-size:15px;color:#fff}
+.rec-income{color:var(--lime);font:700 14px Barlow Condensed;white-space:nowrap}
+.rec-desc{color:#aab2aa;font-size:13px;line-height:1.5;margin:0 0 8px}
+.rec-meta{color:#7a827a;font-size:11px;margin-bottom:4px}
+.rec-case{color:#cfd6cf;font-size:12px;line-height:1.5}
+.calc-honest-note{background:#1a16080a;border:1px solid #ffc10740;color:#ffd766;font-size:12px;line-height:1.6;border-radius:10px;padding:12px;margin-top:8px}
+
+/* 通用报告卡 */
+.ai-report-card{background:#121512;border:1px solid #c7ff2240;border-radius:14px;padding:16px;margin-top:12px;text-align:left}
+.ai-report-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.ai-badge{background:var(--lime);color:var(--ink);font:700 12px Barlow Condensed;padding:5px 10px;border-radius:20px}
+.ai-report-body{color:#e8ffe8;font-size:13px;line-height:1.7;white-space:pre-wrap}
+.ai-report-foot{color:#7a827a;font-size:11px;line-height:1.6;margin-top:10px}
+
+/* 测评结果 */
+.assess-intro{text-align:center;max-width:420px;margin:0 auto;background:#12151280;border:1px solid #ffffff1f;border-radius:16px;padding:28px 22px}
+.assess-intro h3{color:#fff;font-size:22px;font-weight:900;margin:0 0 10px}
+.assess-intro p{color:#aab2aa;font-size:14px;line-height:1.6;margin:0 0 18px}
+.assess-result{display:grid;grid-template-columns:1fr;gap:24px;max-width:760px;margin:0 auto}
+.assess-level{display:flex;gap:16px;align-items:center;background:#121512;border:1px solid #c7ff2240;border-radius:16px;padding:20px}
+.level-badge{flex:0 0 64px;height:64px;width:64px;border-radius:16px;font:900 24px/64px Barlow Condensed;text-align:center;color:#0a0b0b}
+.level-title{font-size:20px;font-weight:900}
+.level-desc{color:#aab2aa;font-size:13px;line-height:1.5;margin-top:4px}
+.assess-radar{display:flex;justify-content:center}
+.assess-dims{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dim-bar-header{display:flex;justify-content:space-between;font-size:13px;color:#e8ffe8;margin-bottom:5px;font-weight:600}
+.dim-bar-track{height:8px;background:#ffffff1a;border-radius:8px;overflow:hidden}
+.dim-bar-fill{height:100%;border-radius:8px;transition:.4s}
+.assess-advice{background:#12151280;border:1px solid #ffffff1f;border-radius:16px;padding:20px}
+.adv-dim-block{margin-bottom:14px}
+.adv-dim-head{display:flex;justify-content:space-between;font-size:13px;color:#e8ffe8;font-weight:700;margin-bottom:6px}
+.adv-dim-list{margin:0;padding-left:18px}
+.adv-dim-list li{color:#aab2aa;font-size:12px;line-height:1.6;margin-bottom:4px}
+
+/* 内容工坊 */
+.workshop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.prompt-card{background:#12151280;border:1px solid #ffffff1f;border-radius:16px;padding:20px;display:flex;flex-direction:column}
+.prompt-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.prompt-actions{display:flex;gap:8px}
+.copy-btn{background:#1c1e1b;border:1px solid #ffffff2b;color:var(--lime);font:600 12px "Noto Sans SC",sans-serif;padding:6px 11px;border-radius:20px;cursor:pointer;transition:.18s}
+.copy-btn:hover{border-color:var(--lime);background:#c7ff2212}
+.prompt-title{color:#fff;font-size:17px;font-weight:800;margin:0 0 8px}
+.prompt-usecase{color:#c7ff22cc;font-size:12px;line-height:1.5;margin:0 0 10px}
+.prompt-body{background:#0e100e80;border:1px solid #ffffff14;border-radius:10px;padding:12px;font-size:12px;color:#cfd6cf;line-height:1.6;white-space:pre-wrap;max-height:220px;overflow:auto;margin-bottom:10px}
+.prompt-tips{color:#7a827a;font-size:11px;line-height:1.5;margin-bottom:12px}
+.prompt-form{background:#0e100e80;border-radius:10px;padding:12px;margin-bottom:8px}
+.prompt-form-title{color:#cfd6cf;font-size:12px;font-weight:600;margin-bottom:10px}
+.prompt-form-field{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.prompt-form-field label{color:#7a827a;font-size:11px}
+.prompt-input{background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:8px;padding:9px 10px;font-size:13px;outline:none}
+.prompt-input:focus{border-color:var(--lime)}
+.ai-gen-result{margin-top:6px}
+
+/* 按钮 */
+.btn{border:0;border-radius:12px;font:700 14px/1 "Noto Sans SC",sans-serif;cursor:pointer;transition:.18s;padding:13px 18px}
+.btn-primary{background:var(--lime);color:var(--ink)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px #c7ff2255}
+.btn-outline{background:transparent;border:1px solid #ffffff33;color:#e8ffe8}
+.btn-outline:hover{border-color:var(--lime);color:#fff}
+.btn-sm{padding:9px 14px;font-size:13px}
+.btn-block{display:block;width:100%;text-align:center;text-decoration:none;box-sizing:border-box}
+
+/* Toast */
+.toast-msg{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:var(--lime);color:var(--ink);font:700 14px "Noto Sans SC",sans-serif;padding:12px 22px;border-radius:40px;opacity:0;transition:.3s;z-index:10001;box-shadow:0 8px 30px #00000066}
+.toast-msg.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* 响应式 */
+@media(max-width:720px){
+  .ai-center{padding:60px 16px}
+  .calc-form{grid-template-columns:1fr}
+  .assess-dims{grid-template-columns:1fr}
+  .money-stats{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
 <body><main>
 <div class="value-teaser"><span class="vt-ico">🗺️</span><span>滑到底，<b>澄导亲手发你一份专属 AI 成长地图</b> · 前 100 位加微赠《一人公司 AI 落地手册》</span></div><header class="site-header"><a class="brand" href="#top" aria-label="OPC-AI 首页"><span class="brand-mark"><span>O</span></span><span class="brand-name">OPC<span>·AI</span></span></a><nav class="desktop-nav" aria-label="主导航"><a href="#path">成长路径</a><a href="#tools">AI 工具</a><a href="#stories">成功故事</a><a href="#about">关于我们</a></nav><a class="header-cta wechat-trigger" href="#join">开启成长计划 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><button class="menu-button" type="button" aria-label="打开菜单"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu" aria-hidden="true"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg></button></header>
 <nav class="mobile-nav" id="mobileNav">
 <a href="#path">成长路径</a>
-<a href="#tools">AI 工具</a>
+<a href="#ai-center">AI 互动</a>
 <a href="#stories">成功故事</a>
 <a href="#about">关于我们</a>
 <a class="mobile-nav-cta wechat-trigger" role="button" tabindex="0">开启成长计划</a>
-</nav><section class="hero" id="top"><div class="hero-grid" aria-hidden="true"></div><div class="hero-orbit orbit-one" aria-hidden="true"></div><div class="hero-orbit orbit-two" aria-hidden="true"></div><div class="hero-copy"><div class="eyebrow reveal reveal-1"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> AI 驱动的创就业成长平台</div><h1 class="reveal reveal-2">让每一个<span>不甘平凡</span>的人<br/>都有能力<span class="accent-word">重启未来<i></i></span></h1><p class="hero-description reveal reveal-3">从职业探索、技能提升到就业加速、创业孵化，<br class="desktop-break"/>OPC-AI 用智能工具与真实连接，陪你把可能变成结果。</p><div class="hero-actions reveal reveal-4"><a class="primary-button wechat-trigger" href="#join">免费开启成长计划 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a class="text-button" href="#path"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play" aria-hidden="true"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"></path><circle cx="12" cy="12" r="10"></circle></svg></span> 了解 OPC-AI</a></div><div class="hero-proof reveal reveal-5"><div class="avatar-stack" aria-hidden="true"><span>创</span><span>职</span><span>技</span><span>+</span></div><p><strong>12,800+</strong> 位成长者正在 OPC-AI 开启新可能</p></div></div><div class="hero-visual reveal reveal-3" aria-label="OPC-AI 成长数据概览"><div class="signal-label signal-label-top"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg> OPPORTUNITY SIGNAL</div><div class="core-graphic"><div class="core-ring ring-a"></div><div class="core-ring ring-b"></div><div class="core-ring ring-c"></div><div class="core-center"><span>OPC</span><strong>AI</strong><small>GROWTH CORE</small></div><div class="floating-node node-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg><span>技能</span></div><div class="floating-node node-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span>连接</span></div><div class="floating-node node-3"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg><span>创业</span></div></div><div class="data-card data-card-left"><span>目标进度</span><strong>72%</strong><div class="progress-track"><i></i></div></div><div class="data-card data-card-right"><span>今日机会</span><strong>+24</strong><small>较昨日 ↗ 18%</small></div><div class="signal-label signal-label-bottom">BUILD · CONNECT · GROW</div></div><a class="scroll-cue" href="#manifesto" aria-label="向下浏览"><span>SCROLL TO EXPLORE</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></a></section><section class="manifesto" id="manifesto"><div class="section-kicker">WHY OPC-AI <span></span></div><div class="manifesto-layout"><h2>时代不给标准答案，<br/>我们帮你<span>创造答案。</span></h2><div class="manifesto-copy"><p>变化从未如此之快。单一技能、固定路径和被动等待，已经无法回应新的职业世界。</p><p>OPC-AI 相信，每个人都可以成为自己的“一人公司”——拥有清晰方向、复合能力与持续创造价值的行动力。</p></div></div><div class="metrics-row"><div><strong>4</strong><span>大成长模块</span></div><div><strong>200+</strong><span>行业导师与共创者</span></div><div><strong>86%</strong><span>学员完成关键跃迁</span></div><div><strong>24/7</strong><span>AI 成长伙伴在线</span></div></div></section><section class="path-section" id="path"><div class="section-heading"><div><div class="section-kicker light">YOUR GROWTH PATH <span></span></div><h2>从迷茫到行动，<br/><em>四步走出你的路。</em></h2></div><p>不是贩卖焦虑，而是提供一套可执行、可衡量、可迭代的成长系统。</p></div><div class="path-grid"><article class="path-card"><div class="path-topline"><span>01</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-compass" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path></svg></div><h3>职业定位</h3><h4>找到你的优势坐标</h4><p>基于能力、兴趣与市场趋势，生成个性化职业定位报告与成长路线。</p><div class="tag-list"><span>AI 职业测评</span><span>能力画像</span><span>趋势洞察</span></div></article><article class="path-card"><div class="path-topline"><span>02</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg></div><h3>技能跃迁</h3><h4>用项目练出真能力</h4><p>以真实商业课题驱动学习，在实战中完成从知识输入到作品输出。</p><div class="tag-list"><span>实战营</span><span>行业导师</span><span>作品集</span></div></article><article class="path-card"><div class="path-topline"><span>03</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business" aria-hidden="true"><path d="M12 12h.01"></path><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path><path d="M22 13a18.15 18.15 0 0 1-20 0"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div><h3>就业加速</h3><h4>让机会精准找到你</h4><p>从简历、面试到岗位匹配，AI 与职业顾问共同陪伴每个关键节点。</p><div class="tag-list"><span>简历优化</span><span>模拟面试</span><span>岗位内推</span></div></article><article class="path-card"><div class="path-topline"><span>04</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg></div><h3>创业孵化</h3><h4>把想法变成新事业</h4><p>链接方法、导师、伙伴与资源，跑通从创意验证到商业落地的闭环。</p><div class="tag-list"><span>商业画布</span><span>MVP 共创</span><span>资源对接</span></div></article></div></section><section class="tools-section" id="tools"><div class="tools-intro"><div class="section-kicker">AI TOOLKIT <span></span></div><h2>不是替你思考，<br/>而是让你<span>想得更远。</span></h2><p>每一个 AI 工具，都围绕真实成长场景设计。少一点空泛建议，多一点即时行动。</p><a class="inline-link wechat-trigger" href="#join">探索全部工具 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div><div class="tools-grid"><article class="tool-card lime"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>AI 生涯教练</h3><p>随时拆解困惑，获得清晰、可执行的下一步。</p><button type="button" aria-label="体验AI 生涯教练"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article><article class="tool-card blue"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>智能简历工坊</h3><p>匹配目标岗位，提炼经历中的高价值表达。</p><button type="button" aria-label="体验智能简历工坊"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article><article class="tool-card orange"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>创业点子验证器</h3><p>快速梳理用户、场景、痛点与商业机会。</p><button type="button" aria-label="体验创业点子验证器"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article><article class="tool-card violet"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>机会雷达</h3><p>聚合岗位、项目与同行者，发现更多可能。</p><button type="button" aria-label="体验机会雷达"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article></div></section><section class="stories-section" id="stories"><div class="section-heading stories-heading"><div><div class="section-kicker">REAL TRANSFORMATION <span></span></div><h2>改变，正在真实发生。</h2></div><p>他们和你一样，也曾在选择面前犹豫。区别只是，先迈出了第一步。</p></div><div class="stories-grid"><article class="story-card"><div class="story-number">0<!-- -->1</div><blockquote>“<!-- -->我不再只是“想转行”，而是用 6 周做出了第一个 AI 产品作品集。<!-- -->”</blockquote><div class="story-person"><div class="person-avatar">ZR</div><div><strong>周然</strong><span>传统运营 → AI 产品经理</span></div><div class="result-chip">薪资提升 38%</div></div></article><article class="story-card"><div class="story-number">0<!-- -->2</div><blockquote>“<!-- -->从一个模糊想法，到找到首批 100 位种子用户，路径终于清晰了。<!-- -->”</blockquote><div class="story-person"><div class="person-avatar">LX</div><div><strong>林晓</strong><span>自由职业者 → 独立创业者</span></div><div class="result-chip">完成天使轮</div></div></article></div></section><section class="about-section" id="about"><div class="about-card"><div class="about-copy"><div class="section-kicker light">ONE PERSON COMPANY <span></span></div><h2>一个人，也可以是一支队伍。</h2><p>OPC 不只是 One Person Company，更是一种面向未来的能力结构：懂业务、会创造、善连接，借助 AI 放大个人价值。</p></div><div class="principles"><div><span>0<!-- -->1</span><p>以终为始，拒绝无效努力</p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div><span>0<!-- -->2</span><p>真实项目，沉淀可见成果</p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div><span>0<!-- -->3</span><p>长期连接，共建成长网络</p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div></div></div></section><section class="faq-section"><div class="faq-title"><div class="section-kicker">QUICK ANSWERS <span></span></div><h2>你可能还想知道</h2></div><div class="faq-list"><button class="faq-item active" type="button"><span class="faq-question">OPC-AI 适合什么人？<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><span class="faq-answer">适合正在探索职业方向、计划转型、希望提升复合能力，或准备启动个人事业的行动者。</span></button><button class="faq-item " type="button"><span class="faq-question">我没有 AI 基础，可以参加吗？<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><span class="faq-answer">可以。平台强调场景应用而非技术门槛，从易上手的工具和任务开始，逐步建立 AI 协作能力。</span></button><button class="faq-item " type="button"><span class="faq-question">成长计划如何进行？<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><span class="faq-answer">完成初始诊断后，你会获得专属路线，结合 AI 工具、实战任务、导师反馈与社群共创持续推进。</span></button></div></section><section class="join-section" id="join">
+</nav><section class="hero" id="top"><div class="hero-grid" aria-hidden="true"></div><div class="hero-orbit orbit-one" aria-hidden="true"></div><div class="hero-orbit orbit-two" aria-hidden="true"></div><div class="hero-copy"><div class="eyebrow reveal reveal-1"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg> AI 驱动的创就业成长平台</div><h1 class="reveal reveal-2">让每一个<span>不甘平凡</span>的人<br/>都有能力<span class="accent-word">重启未来<i></i></span></h1><p class="hero-description reveal reveal-3">从职业探索、技能提升到就业加速、创业孵化，<br class="desktop-break"/>OPC-AI 用智能工具与真实连接，陪你把可能变成结果。</p><div class="hero-actions reveal reveal-4"><a class="primary-button wechat-trigger" href="#join">免费开启成长计划 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a class="text-button" href="#path"><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-play" aria-hidden="true"><path d="M9 9.003a1 1 0 0 1 1.517-.859l4.997 2.997a1 1 0 0 1 0 1.718l-4.997 2.997A1 1 0 0 1 9 14.996z"></path><circle cx="12" cy="12" r="10"></circle></svg></span> 了解 OPC-AI</a></div><div class="hero-proof reveal reveal-5"><div class="avatar-stack" aria-hidden="true"><span>创</span><span>职</span><span>技</span><span>+</span></div><p><strong>12,800+</strong> 位成长者正在 OPC-AI 开启新可能</p></div></div><div class="hero-visual reveal reveal-3" aria-label="OPC-AI 成长数据概览"><div class="signal-label signal-label-top"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg> OPPORTUNITY SIGNAL</div><div class="core-graphic"><div class="core-ring ring-a"></div><div class="core-ring ring-b"></div><div class="core-ring ring-c"></div><div class="core-center"><span>OPC</span><strong>AI</strong><small>GROWTH CORE</small></div><div class="floating-node node-1"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg><span>技能</span></div><div class="floating-node node-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg><span>连接</span></div><div class="floating-node node-3"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg><span>创业</span></div></div><div class="data-card data-card-left"><span>目标进度</span><strong>72%</strong><div class="progress-track"><i></i></div></div><div class="data-card data-card-right"><span>今日机会</span><strong>+24</strong><small>较昨日 ↗ 18%</small></div><div class="signal-label signal-label-bottom">BUILD · CONNECT · GROW</div></div><a class="scroll-cue" href="#manifesto" aria-label="向下浏览"><span>SCROLL TO EXPLORE</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></a></section><section class="manifesto" id="manifesto"><div class="section-kicker">WHY OPC-AI <span></span></div><div class="manifesto-layout"><h2>时代不给标准答案，<br/>我们帮你<span>创造答案。</span></h2><div class="manifesto-copy"><p>变化从未如此之快。单一技能、固定路径和被动等待，已经无法回应新的职业世界。</p><p>OPC-AI 相信，每个人都可以成为自己的“一人公司”——拥有清晰方向、复合能力与持续创造价值的行动力。</p></div></div><div class="metrics-row"><div><strong>4</strong><span>大成长模块</span></div><div><strong>200+</strong><span>行业导师与共创者</span></div><div><strong>86%</strong><span>学员完成关键跃迁</span></div><div><strong>24/7</strong><span>AI 成长伙伴在线</span></div></div></section><section class="path-section" id="path"><div class="section-heading"><div><div class="section-kicker light">YOUR GROWTH PATH <span></span></div><h2>从迷茫到行动，<br/><em>四步走出你的路。</em></h2></div><p>不是贩卖焦虑，而是提供一套可执行、可衡量、可迭代的成长系统。</p></div><div class="path-grid"><article class="path-card"><div class="path-topline"><span>01</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-compass" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"></path></svg></div><h3>职业定位</h3><h4>找到你的优势坐标</h4><p>基于能力、兴趣与市场趋势，生成个性化职业定位报告与成长路线。</p><div class="tag-list"><span>AI 职业测评</span><span>能力画像</span><span>趋势洞察</span></div></article><article class="path-card"><div class="path-topline"><span>02</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml" aria-hidden="true"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg></div><h3>技能跃迁</h3><h4>用项目练出真能力</h4><p>以真实商业课题驱动学习，在实战中完成从知识输入到作品输出。</p><div class="tag-list"><span>实战营</span><span>行业导师</span><span>作品集</span></div></article><article class="path-card"><div class="path-topline"><span>03</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business" aria-hidden="true"><path d="M12 12h.01"></path><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path><path d="M22 13a18.15 18.15 0 0 1-20 0"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg></div><h3>就业加速</h3><h4>让机会精准找到你</h4><p>从简历、面试到岗位匹配，AI 与职业顾问共同陪伴每个关键节点。</p><div class="tag-list"><span>简历优化</span><span>模拟面试</span><span>岗位内推</span></div></article><article class="path-card"><div class="path-topline"><span>04</span><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-right" aria-hidden="true"><path d="m7 7 10 10"></path><path d="M17 7v10H7"></path></svg></div><div class="path-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"></path><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"></path></svg></div><h3>创业孵化</h3><h4>把想法变成新事业</h4><p>链接方法、导师、伙伴与资源，跑通从创意验证到商业落地的闭环。</p><div class="tag-list"><span>商业画布</span><span>MVP 共创</span><span>资源对接</span></div></article></div></section><section class="tools-section" id="tools"><div class="tools-intro"><div class="section-kicker">AI TOOLKIT <span></span></div><h2>不是替你思考，<br/>而是让你<span>想得更远。</span></h2><p>每一个 AI 工具，都围绕真实成长场景设计。少一点空泛建议，多一点即时行动。</p><a class="inline-link wechat-trigger" href="#join">探索全部工具 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div><div class="tools-grid"><article class="tool-card lime"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>AI 生涯教练</h3><p>随时拆解困惑，获得清晰、可执行的下一步。</p><button type="button" aria-label="体验AI 生涯教练"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article><article class="tool-card blue"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot" aria-hidden="true"><path d="M12 8V4H8"></path><rect width="16" height="12" x="4" y="8" rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>智能简历工坊</h3><p>匹配目标岗位，提炼经历中的高价值表达。</p><button type="button" aria-label="体验智能简历工坊"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article><article class="tool-card orange"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>创业点子验证器</h3><p>快速梳理用户、场景、痛点与商业机会。</p><button type="button" aria-label="体验创业点子验证器"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article><article class="tool-card violet"><div class="tool-icon"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></div><span class="tool-status"><i></i> AVAILABLE</span><h3>机会雷达</h3><p>聚合岗位、项目与同行者，发现更多可能。</p><button type="button" aria-label="体验机会雷达"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></article></div></section><section class="stories-section" id="stories"><div class="section-heading stories-heading"><div><div class="section-kicker">REAL TRANSFORMATION <span></span></div><h2>改变，正在真实发生。</h2></div><p>他们和你一样，也曾在选择面前犹豫。区别只是，先迈出了第一步。</p></div><div class="stories-grid"><article class="story-card"><div class="story-number">0<!-- -->1</div><blockquote>“<!-- -->我不再只是“想转行”，而是用 6 周做出了第一个 AI 产品作品集。<!-- -->”</blockquote><div class="story-person"><div class="person-avatar">ZR</div><div><strong>周然</strong><span>传统运营 → AI 产品经理</span></div><div class="result-chip">薪资提升 38%</div></div></article><article class="story-card"><div class="story-number">0<!-- -->2</div><blockquote>“<!-- -->从一个模糊想法，到找到首批 100 位种子用户，路径终于清晰了。<!-- -->”</blockquote><div class="story-person"><div class="person-avatar">LX</div><div><strong>林晓</strong><span>自由职业者 → 独立创业者</span></div><div class="result-chip">完成天使轮</div></div></article></div></section><section class="about-section" id="about"><div class="about-card"><div class="about-copy"><div class="section-kicker light">ONE PERSON COMPANY <span></span></div><h2>一个人，也可以是一支队伍。</h2><p>OPC 不只是 One Person Company，更是一种面向未来的能力结构：懂业务、会创造、善连接，借助 AI 放大个人价值。</p></div><div class="principles"><div><span>0<!-- -->1</span><p>以终为始，拒绝无效努力</p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div><span>0<!-- -->2</span><p>真实项目，沉淀可见成果</p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div><div><span>0<!-- -->3</span><p>长期连接，共建成长网络</p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg></div></div></div></section><section class="faq-section"><div class="faq-title"><div class="section-kicker">QUICK ANSWERS <span></span></div><h2>你可能还想知道</h2></div><div class="faq-list"><button class="faq-item active" type="button"><span class="faq-question">OPC-AI 适合什么人？<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><span class="faq-answer">适合正在探索职业方向、计划转型、希望提升复合能力，或准备启动个人事业的行动者。</span></button><button class="faq-item " type="button"><span class="faq-question">我没有 AI 基础，可以参加吗？<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><span class="faq-answer">可以。平台强调场景应用而非技术门槛，从易上手的工具和任务开始，逐步建立 AI 协作能力。</span></button><button class="faq-item " type="button"><span class="faq-question">成长计划如何进行？<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg></span><span class="faq-answer">完成初始诊断后，你会获得专属路线，结合 AI 工具、实战任务、导师反馈与社群共创持续推进。</span></button></div></section><section class="ai-center" id="ai-center">
+  <div class="ai-head">
+    <div class="ai-kicker">AI POWER CENTER · 边玩边看清方向</div>
+    <h2 class="ai-title">4 个 AI 互动工具，<em>比说明书更懂你</em></h2>
+    <p class="ai-sub">不是来看广告的。用它们测一测、算一算、生成一份专属内容——答案你自己跑出来，比我说一万句都可信。</p>
+  </div>
+  <div class="ai-tabs">
+    <button class="ai-tab" data-tab="assess" onclick="switchAITab('assess')">🧪 能力测评</button>
+    <button class="ai-tab" data-tab="money" onclick="switchAITab('money')">💰 赚钱引擎</button>
+    <button class="ai-tab" data-tab="atlas" onclick="switchAITab('atlas')">💼 职业图鉴</button>
+    <button class="ai-tab" data-tab="workshop" onclick="switchAITab('workshop')">🛠️ 内容工坊</button>
+  </div>
+
+  <div id="panel-assess" class="ai-panel">
+    <div id="assess-container"></div>
+  </div>
+
+  <div id="panel-money" class="ai-panel" style="display:none">
+    <div id="money-filter-bar"></div>
+    <div id="money-grid" class="tool-grid"></div>
+    <div style="text-align:center;margin:34px 0 6px">
+      <button class="btn btn-primary" onclick="initMoneyCalc()">🧮 打开赚钱计算器：算我的最优变现路径</button>
+    </div>
+    <div id="money-calc-container"></div>
+    <div id="money-calc-result" style="display:none"></div>
+  </div>
+
+  <div id="panel-atlas" class="ai-panel" style="display:none">
+    <div id="atlas-filter-bar"></div>
+    <div id="atlas-grid" class="tool-grid"></div>
+    <div style="text-align:center;margin:34px 0 6px">
+      <button class="btn btn-primary" onclick="initAtlasQuiz()">🎯 5 题测出你最适合的 AI 职业方向</button>
+    </div>
+    <div id="atlas-quiz-container"></div>
+  </div>
+
+  <div id="panel-workshop" class="ai-panel" style="display:none">
+    <div id="workshop-filter-bar"></div>
+    <div id="workshop-grid" class="workshop-grid"></div>
+  </div>
+</section><section class="join-section" id="join">
   <div class="join-noise"></div>
   <div class="join-label">YOUR NEXT CHAPTER STARTS HERE</div>
   <h2>未来不是等待出来的，<br/><span>是创造出来的。</span></h2>
@@ -156,11 +340,544 @@
   var modal=document.getElementById('wechatModal');
   function openWechat(e){if(e)e.preventDefault();modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
   function closeWechat(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
-  document.querySelectorAll('.wechat-trigger').forEach(function(el){el.addEventListener('click',openWechat)});
+  // 事件委托：覆盖静态 + AI 赋能中心动态生成的 .wechat-trigger 按钮
+  document.addEventListener('click', function(e){
+    var el = e.target.closest ? e.target.closest('.wechat-trigger') : null;
+    if(el){ e.preventDefault(); openWechat(e); }
+  });
   if(modal){modal.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeWechat)});
     var fb=document.getElementById('wechatFallback');
     if(fb){fb.addEventListener('submit',function(e){e.preventDefault();var phone=fb.phone.value.trim();if(!phone){fb.phone.focus();return}fb.innerHTML='<p style="color:#c7ff22;font-weight:700;margin:0">已收到 '+phone+'，澄导会尽快加你 ✦</p>'})}
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeWechat()})}
-})();</script>
+})();
+
+/* ===== AI 赋能中心逻辑 ===== */
+/* =========================================================
+   OPC-AI 赋能中心 · 客户端互动模块（移植自青蓝版真实逻辑）
+   纯前端运行，无需后端。绿色魂配色。
+   ========================================================= */
+
+/* ---------- 数据：职业图鉴 ---------- */
+var ATLAS_CATEGORIES = [
+  { id: 'tech', name: 'AI技术岗', icon: '💻', color: '#00d4ff' },
+  { id: 'app', name: 'AI应用岗', icon: '🎯', color: '#7b2dff' },
+  { id: 'biz', name: 'AI创业岗', icon: '🚀', color: '#ffc107' },
+  { id: 'enable', name: 'AI赋能岗', icon: '🤝', color: '#00e676' }
+];
+var CAREERS = [
+  { cat:'tech', title:'AI应用工程师', salary:'15K-40K', skills:['Python','LLM API','RAG','向量数据库'], aiRisk:'低', difficulty:4, desc:'用AI模型+工程化能力，搭建企业级AI应用系统', path:['掌握Python+API调用','学习RAG+向量库','实战1-2个AI应用项目','投递AI应用岗或接单'] },
+  { cat:'tech', title:'提示词工程师', salary:'8K-25K', skills:['Prompt设计','LLM原理','A/B测试','业务理解'], aiRisk:'中', difficulty:2, desc:'设计高质量Prompt，让AI输出精准可控的结果', path:['系统学习Prompt工程','积累100+实战Prompt','建立Prompt库','接单或入职AI公司'] },
+  { cat:'tech', title:'AI模型训练师', salary:'12K-30K', skills:['机器学习','数据标注','模型微调','评估体系'], aiRisk:'低', difficulty:4, desc:'针对垂直场景微调AI模型，提升特定任务表现', path:['学习ML基础','掌握LoRA/QLoRA微调','在HuggingFace发布模型','积累行业案例'] },
+  { cat:'tech', title:'RAG知识库工程师', salary:'15K-35K', skills:['向量数据库','LLM API','Python','数据处理'], aiRisk:'低', difficulty:3, desc:'为企业搭建私有知识库+AI问答系统', path:['学习Embedding+向量检索','搭建RAG Pipeline','实战企业知识库项目','ToB服务变现'] },
+  { cat:'app', title:'AI产品经理', salary:'15K-35K', skills:['需求分析','AI能力边界','Prompt设计','数据分析'], aiRisk:'低', difficulty:3, desc:'在传统产品中嵌入AI能力，设计AI产品方案', path:['学习AI能力边界','掌握AI产品设计方法论','实战1个AI产品方案','转型AI PM岗位'] },
+  { cat:'app', title:'AI运营专员', salary:'8K-20K', skills:['内容策划','数据分析','Prompt','平台运营'], aiRisk:'中', difficulty:2, desc:'用AI工具提升运营效率，批量生产内容+数据驱动决策', path:['掌握主流AI工具','学习AI内容工厂','搭建自动化运营流程','入职或自由职业'] },
+  { cat:'app', title:'AI内容策划', salary:'8K-25K', skills:['文案','Prompt','选题策划','SEO'], aiRisk:'中', difficulty:2, desc:'用AI批量生产高质量内容，覆盖图文/视频/社媒全平台', path:['学习AI写作+AI绘画','搭建内容生产线','积累爆款案例','自媒体或接单'] },
+  { cat:'app', title:'AI数据分析师', salary:'12K-30K', skills:['Python','SQL','AI分析工具','可视化'], aiRisk:'低', difficulty:3, desc:'用AI加速数据分析，从数据清洗到洞察报告全链路提效', path:['掌握Python+SQL','学习AI数据分析工具','实战商业分析项目','企业服务或自由职业'] },
+  { cat:'biz', title:'一人公司创始人', salary:'不设限', skills:['AI工具矩阵','商业模型','内容获客','私域运营'], aiRisk:'低', difficulty:5, desc:'用AI实现单人百人产出，OPC模式核心实践者', path:['选定变现方向','搭建AI工具栈','跑通0→1闭环','规模化复制'] },
+  { cat:'biz', title:'AI工具开发者', salary:'10K-50K+', skills:['编程','AI API','产品设计','增长'], aiRisk:'低', difficulty:4, desc:'开发AI工具/SaaS产品，订阅制或买断变现', path:['发现痛点需求','用AI辅助开发MVP','上线获取种子用户','迭代增长'] },
+  { cat:'biz', title:'AI服务提供商', salary:'10K-40K', skills:['AI落地','项目管理','客户沟通','方案设计'], aiRisk:'低', difficulty:3, desc:'为中小企业提供AI落地服务，按项目收费', path:['掌握3-5个AI落地场景','积累标杆案例','建立获客渠道','团队化或标准化'] },
+  { cat:'biz', title:'AI培训讲师', salary:'8K-30K', skills:['AI实战','课程设计','演讲','营销'], aiRisk:'低', difficulty:3, desc:'输出AI技能培训，线上课程或企业内训', path:['深度实战AI工具','设计体系化课程','建立个人IP','线上课+企业内训双轨'] },
+  { cat:'enable', title:'AI转型顾问', salary:'15K-40K', skills:['行业洞察','AI能力','咨询方法论','项目管理'], aiRisk:'低', difficulty:4, desc:'帮传统企业诊断AI转型路径，从战略到落地', path:['积累行业经验','掌握AI落地方法论','做3-5个咨询案例','建立顾问品牌'] },
+  { cat:'enable', title:'AI项目管理', salary:'12K-30K', skills:['项目管理','AI技术理解','沟通','敏捷'], aiRisk:'低', difficulty:3, desc:'管理AI项目全流程，协调技术/业务/资源', path:['学习项目管理方法论','理解AI技术边界','实战AI项目管理','PMP+AI双重认证'] },
+  { cat:'enable', title:'AI合规专员', salary:'10K-25K', skills:['法律法规','AI伦理','风险评估','合规体系'], aiRisk:'低', difficulty:3, desc:'确保AI应用合规，管控数据安全和伦理风险', path:['学习AI相关法规','理解AI技术风险','建立合规框架','企业内审或咨询'] },
+  { cat:'enable', title:'AI生态运营', salary:'8K-25K', skills:['社区运营','BD','内容','活动策划'], aiRisk:'中', difficulty:2, desc:'运营AI开发者/创业者社区，连接生态资源', path:['深耕AI圈子','搭建社区运营体系','连接开发者+企业','活动+内容+撮合'] }
+];
+
+/* ---------- 数据：赚钱引擎 ---------- */
+var MONEY_CATEGORIES = [
+  { id:'content', name:'内容变现', icon:'📝', color:'#00d4ff' },
+  { id:'tool', name:'工具变现', icon:'🔧', color:'#7b2dff' },
+  { id:'service', name:'服务变现', icon:'🤝', color:'#ffc107' },
+  { id:'product', name:'产品变现', icon:'📦', color:'#00e676' }
+];
+var MONEY_MODELS = [
+  { cat:'content', title:'AI短视频矩阵', invest:'500-2000元', income:'3K-30K/月', roi:'2-4月', difficulty:2, time:'2-4周首条', skills:['AI内容生成','剪映','平台运营'], desc:'用AI批量生成短视频脚本+素材，多账号矩阵分发，流量分成+带货变现', case:'楚川：一条视频5元成本，日产1000条，月入10万+' },
+  { cat:'content', title:'AI图文自媒体', invest:'0-500元', income:'2K-20K/月', roi:'1-3月', difficulty:1, time:'1-2周首篇', skills:['AI写作','选题','SEO'], desc:'用AI批量生产公众号/头条/知乎图文，广告分成+知识付费变现', case:'某AI写作矩阵：10个号×日均3篇，月广告分成4万+' },
+  { cat:'content', title:'AI绘画接单', invest:'0-300元', income:'2K-15K/月', roi:'即时', difficulty:2, time:'1周上手', skills:['Midjourney/SD','审美','客户沟通'], desc:'用AI生成插画/海报/头像/Logo，接单平台+私域变现', case:'某画师：小红书引流，单价50-500元，月接30+单' },
+  { cat:'content', title:'AI配音/数字人', invest:'500-3000元', income:'3K-20K/月', roi:'1-2月', difficulty:2, time:'2-3周上手', skills:['AI配音工具','数字人','剪辑'], desc:'用AI生成配音+数字人视频，接短视频/课程/广告配音单', case:'某配音工作室：AI配音+人工校对，产能提升10倍' },
+  { cat:'tool', title:'AI工具开发销售', invest:'2000-10000元', income:'5K-50K+/月', roi:'3-6月', difficulty:4, time:'1-3月开发', skills:['编程','AI API','产品设计'], desc:'开发AI小工具/SaaS，订阅制或买断制销售', case:'某独立开发者：AI写作助手SaaS，月MRR 2万+' },
+  { cat:'tool', title:'AI自动化服务', invest:'500-2000元', income:'3K-30K/月', roi:'1-2月', difficulty:3, time:'2-4周上手', skills:['自动化工具','API集成','流程设计'], desc:'为企业搭建AI自动化工作流，按项目或月费收费', case:'某自动化服务商：企业微信+AI自动回复，单客户月费3000' },
+  { cat:'tool', title:'AI数据分析服务', invest:'0-1000元', income:'3K-25K/月', roi:'1-2月', difficulty:3, time:'2-3周上手', skills:['Python','AI分析','可视化'], desc:'用AI加速数据分析，为企业提供经营分析报告', case:'某数据分析师：AI辅助周报，服务5家企业月入2万' },
+  { cat:'tool', title:'AI客服系统搭建', invest:'1000-5000元', income:'5K-30K/月', roi:'2-3月', difficulty:3, time:'1-2周搭建', skills:['AI对话','RAG','部署'], desc:'为企业搭建AI智能客服系统，按项目+维护费收费', case:'某技术团队：为10家电商搭建AI客服，月维护费1.5万' },
+  { cat:'service', title:'AI咨询服务', invest:'0-500元', income:'5K-50K/月', roi:'即时', difficulty:4, time:'需积累', skills:['行业经验','AI实战','咨询能力'], desc:'为企业管理层提供AI转型咨询，按小时/项目收费', case:'某AI顾问：5000元/小时，月咨询收入8万+' },
+  { cat:'service', title:'AI培训服务', invest:'500-2000元', income:'3K-30K/月', roi:'1-2月', difficulty:3, time:'2-4周备课', skills:['AI实战','课程设计','演讲'], desc:'面向个人/企业做AI技能培训，线上课+线下内训', case:'某AI讲师：企业内训2万/天，线上课月销10万+' },
+  { cat:'service', title:'AI代运营', invest:'500-2000元', income:'5K-30K/月', roi:'1-2月', difficulty:3, time:'2-4周上手', skills:['AI内容','运营','数据分析'], desc:'用AI为企业代运营社媒账号，按月费收费', case:'某代运营团队：服务8家企业，月费3000-8000/家' },
+  { cat:'service', title:'AI设计服务', invest:'0-500元', income:'2K-20K/月', roi:'即时', difficulty:2, time:'1-2周上手', skills:['AI绘画','设计基础','客户沟通'], desc:'用AI生成海报/Logo/UI/包装设计，接单变现', case:'某设计师：AI+人工，日产出10套方案，月入1.5万' },
+  { cat:'product', title:'AI数字产品', invest:'0-1000元', income:'2K-30K/月', roi:'1-3月', difficulty:2, time:'1-2周制作', skills:['AI内容','产品思维','营销'], desc:'用AI生产电子书/模板/素材包，数字商品一次制作反复销售', case:'某创作者：AI生成PPT模板包，月销5000份×9.9元' },
+  { cat:'product', title:'AI在线课程', invest:'1000-5000元', income:'5K-50K+/月', roi:'2-4月', difficulty:3, time:'1-2月制作', skills:['AI实战','课程设计','营销'], desc:'录制AI实战课程，知识付费平台销售', case:'某讲师：AI写作课上线首月销售额12万' },
+  { cat:'product', title:'AI Prompt包', invest:'0元', income:'1K-10K/月', roi:'即时', difficulty:1, time:'1-2周整理', skills:['Prompt设计','分类整理','营销'], desc:'整理优质Prompt合集，打包销售', case:'某Prompt工程师：100个Prompt卖39元，月销2000+份' },
+  { cat:'product', title:'AI SaaS工具', invest:'5000-20000元', income:'10K-100K+/月', roi:'3-12月', difficulty:5, time:'2-6月开发', skills:['全栈开发','AI API','增长'], desc:'开发AI SaaS产品，订阅制收费，可规模化增长', case:'某SaaS：AI文案生成工具，月MRR 5万+，估值千万' }
+];
+
+/* ---------- 数据：内容工坊 Prompt 库 ---------- */
+var WORKSHOP_CATEGORIES = [
+  { id:'video', name:'短视频脚本', icon:'🎬', color:'#00d4ff' },
+  { id:'social', name:'社媒图文', icon:'📱', color:'#7b2dff' },
+  { id:'copy', name:'商业文案', icon:'✍️', color:'#ffc107' },
+  { id:'live', name:'直播话术', icon:'🎥', color:'#00e676' }
+];
+var PROMPTS = [
+  { cat:'video', title:'爆款选题生成器', prompt:'你是一个短视频爆款选题专家。请基于以下信息生成10个爆款选题：\n【领域】{输入你的领域}\n【目标受众】{输入受众画像}\n【平台】抖音/小红书/视频号\n\n要求：\n1. 每个选题包含：标题、钩子（前3秒）、核心价值点\n2. 标题要制造好奇心缺口或利益承诺\n3. 覆盖不同内容类型：干货/故事/争议/对比/盘点', useCase:'短视频选题阶段，解决"不知道拍什么"的痛点', tips:'一次生成10个选题，筛选3个最优，再让AI展开完整脚本' },
+  { cat:'video', title:'完整短视频脚本', prompt:'请为以下选题写一个60秒短视频脚本：\n【选题】{输入选题}\n【风格】专业但接地气/搞笑/煽情\n【平台】抖音\n\n脚本格式：\n- 0-3秒（钩子）：一句话抓住注意力\n- 3-15秒（痛点）：引发共鸣\n- 15-45秒（解决方案）：核心干货，分3点\n- 45-55秒（案例/证据）：增强可信度\n- 55-60秒（CTA）：引导互动\n\n同时给出：画面建议、字幕要点、BGM风格', useCase:'有了选题后，快速生成可拍摄的完整脚本', tips:'生成后让AI再出2个不同风格的版本，A/B测试效果' },
+  { cat:'video', title:'评论区互动话术', prompt:'你是一个短视频运营专家。以下是视频的核心内容，请生成20条评论区互动话术：\n【视频主题】{输入主题}\n\n要求：\n- 5条提问型（引导用户评论）\n- 5条补充型（补充视频未说完的干货）\n- 5条争议型（引发讨论）\n- 5条福利型（引导关注/私信）\n\n每条不超过50字，口语化，带emoji', useCase:'视频发布后，用小号在评论区带节奏，提升互动率', tips:'分批发布，每2小时发5条，模拟真实用户节奏' },
+  { cat:'social', title:'小红书种草笔记', prompt:'请写一篇小红书种草笔记：\n【产品/服务】{输入产品}\n【目标人群】{输入人群}\n【核心卖点】{输入1-3个卖点}\n\n格式要求：\n1. 标题：15字以内，带emoji，制造好奇心\n2. 正文：300-500字，分段清晰，每段不超过3行\n3. 语气：闺蜜分享感，真诚不广告\n4. 结构：痛点引入→发现好物→使用体验→效果对比→总结推荐\n5. 结尾：引导互动+话题标签（5-8个）', useCase:'小红书内容种草，适合电商/服务推广', tips:'配图用AI生成3-4张场景图，首图最关键' },
+  { cat:'social', title:'公众号深度文章', prompt:'请写一篇公众号深度文章：\n【主题】{输入主题}\n【字数】2000-3000字\n【受众】{输入目标读者}\n\n结构要求：\n1. 标题：制造信息差或利益承诺\n2. 开头（200字）：用一个真实故事或数据引入\n3. 正文分3-4个部分，每部分有：小标题、核心观点、案例支撑、实操建议\n4. 每个部分结尾有"金句"总结\n5. 结尾：总结全文+引导关注+互动提问\n\n风格：专业但有温度，像朋友聊天而非教科书', useCase:'公众号深度内容，建立专业IP', tips:'生成后手动调整开头和结尾，加入个人真实经历增加可信度' },
+  { cat:'social', title:'朋友圈营销文案', prompt:'请写5条朋友圈营销文案：\n【产品/服务】{输入产品}\n【风格】专业/生活化/故事型\n\n要求：\n- 每条100字以内\n- 不要硬广，要软植入\n- 5条分别用不同角度：用户见证/场景痛点/知识分享/限时福利/日常故事\n- 每条配emoji和排版空行\n- 结尾有软性CTA（私信/评论）', useCase:'朋友圈日常营销，保持曝光但不招人烦', tips:'5条分5天发，配合生活内容穿插，不要连发广告' },
+  { cat:'copy', title:'产品详情页文案', prompt:'请为以下产品写详情页文案：\n【产品】{输入产品名}\n【价格】{输入价格}\n【核心卖点】{输入3-5个卖点}\n【目标用户】{输入用户画像}\n\n文案结构：\n1. 首屏：一句话价值主张+核心卖点提炼（20字内）\n2. 痛点场景：3个用户真实痛点\n3. 解决方案：产品如何解决每个痛点\n4. 信任背书：数据/案例/权威认证\n5. 对比优势：vs竞品/vs替代方案\n6. 常见疑问：FAQ 5条\n7. 限时CTA：促单话术', useCase:'电商产品详情页/落地页文案', tips:'首屏文案最关键，准备3个版本A/B测试' },
+  { cat:'copy', title:'商业BP摘要', prompt:'请为以下项目写一段投资人BP摘要（300字以内）：\n【项目名】{输入项目名}\n【一句话介绍】{输入介绍}\n【目标市场】{输入市场规模}\n【核心模式】{输入商业模式}\n【团队亮点】{输入团队优势}\n\n要求：\n- 开头一句话说清楚"做什么+为谁+解决什么问题"\n- 中间用数据支撑市场规模和增长潜力\n- 结尾点明核心壁垒和盈利模式\n- 整体风格：简洁有力，每句话都有信息量', useCase:'融资BP首页摘要/电梯演讲/路演开场', tips:'投资人看BP平均30秒决定是否继续，摘要必须钩住' },
+  { cat:'copy', title:'私域社群欢迎语', prompt:'请为以下社群写欢迎语和群规：\n【社群主题】{输入主题}\n【群类型】免费/付费\n\n包含：\n1. 欢迎语（100字，温暖+期待感）\n2. 群规（5条，简洁明确）\n3. 新人引导（自我介绍模板+第一个小任务）\n4. 本周话题预告（3个话题）\n5. 福利说明（群专属福利+领取方式）', useCase:'新建社群/新人入群自动化', tips:'欢迎语设置自动回复，新人入群立即触发' },
+  { cat:'live', title:'直播开场话术', prompt:'请为以下直播写开场话术（前5分钟）：\n【直播主题】{输入主题}\n【主播人设】{输入人设}\n【核心产品】{输入要推的产品}\n\n话术结构：\n1. 暖场（1分钟）：打招呼+制造期待感\n2. 痛点（1分钟）：抛出观众的真实痛点\n3. 预告（1分钟）：今天直播能解决什么+福利预告\n4. 互动（1分钟）：引导评论+点赞+关注\n5. 引入正题（1分钟）：开始第一个干货点\n\n语气：口语化、有感染力、带节奏感', useCase:'直播开场前5分钟，决定观众是否停留', tips:'开场前3秒最关键，用一个反常识观点或数字钩住' },
+  { cat:'live', title:'直播带货逼单话术', prompt:'请为以下产品写直播带货逼单话术：\n【产品】{输入产品}\n【原价】{输入原价}\n【直播价】{输入直播价}\n【库存】{输入库存数}\n\n逼单5步：\n1. 价值重申：这个产品值多少钱（锚定价值）\n2. 价格对比：原价vs直播价vs市场价\n3. 稀缺性：库存有限+限时限量\n4. 从众心理：已有XX人下单+好评截图\n5. 行动指令：倒计时+手把手教下单\n\n每步配具体话术，口语化，带情绪推进', useCase:'直播带货逼单环节，提升转化率', tips:'逼单环节配合倒计时音效+库存递减数字，营造紧迫感' }
+];
+
+/* ---------- 数据：能力测评 ---------- */
+var ASSESS_DIMENSIONS = [
+  { id:'tool', name:'工具使用', icon:'🔧', desc:'AI工具熟练度' },
+  { id:'flow', name:'工作流设计', icon:'⚙️', desc:'自动化流程能力' },
+  { id:'product', name:'产品思维', icon:'💡', desc:'需求分析与方案设计' },
+  { id:'arch', name:'架构能力', icon:'🏗️', desc:'系统设计与技术选型' },
+  { id:'money', name:'变现能力', icon:'💰', desc:'商业模型与获客转化' }
+];
+var ASSESS_ADVICE = {
+  tool: [
+    '【0→1】今天注册一个AI对话工具（DeepSeek/豆包/Kimi均可），把本周最重复的3件事丢给它试一次',
+    '【1→2】建立自己的Prompt收藏夹：把用得顺手的提问模板存成文档，下次直接复用',
+    '【2→3】每周解锁1个新工具：AI绘画、AI视频、AIPPT各试一轮，找到你最顺手的2个',
+    '【3→4】用AI编程工具（Cursor/Copilot）做一个小工具给自己用，哪怕只是批量重命名文件'
+  ],
+  flow: [
+    '【0→1】先用现成模板：去Coze/扣子或飞书多维表格，照一个"自动回复"模板跑通一遍',
+    '【1→2】把你的一个重复工作流画成流程图（开始→步骤→结束），标出哪步能用AI替代',
+    '【2→3】自己搭一个2-3步骤的自动化：如"收到表单→AI写摘要→发到群"',
+    '【3→4】编排多Agent协作：让一个Agent调研、一个Agent写稿、一个Agent审核，串成流水线'
+  ],
+  product: [
+    '【0→1】下次有想法，先用一句话写下"为谁解决什么问题"，别急着做',
+    '【1→2】学写最简PRD：背景、目标用户、核心功能、验收标准四段式',
+    '【2→3】做1次真实用户访谈（5人即可），把结论写进方案，别只拍脑袋',
+    '【3→4】给每个方案配数据指标：北极星指标+3个过程指标，上线后盯数据迭代'
+  ],
+  arch: [
+    '【0→1】理解"API"是什么：调一次公开API（如天气接口），知道前后端怎么对话',
+    '【1→2】用云端API搭一个最小应用：输入问题→调AI→返回答案，部署到本地能跑',
+    '【2→3】搭一个带RAG的小知识库：把你的笔记喂给向量库，让AI只基于它回答',
+    '【3→4】做选型框架：成本/性能/合规/可控性四维打分，能给企业出架构建议'
+  ],
+  money: [
+    '【0→1】今天用AI做一件能换钱的小事：帮人写文案/做PPT，标价99元发出去',
+    '【1→2】跑通第一笔AI收入后，把它固化成标准服务，复购2次',
+    '【2→3】建内容获客闭环：1个平台日更→引流到私域→转化，跑出稳定线索',
+    '【3→4】设计可规模化产品：课程/SaaS/陪跑营，让交付不靠你一对一时间'
+  ]
+};
+var QUIZ_QUESTIONS = [
+  { dim:'tool', q:'你平时使用ChatGPT/Claude等AI对话工具的频率是？', opts:[{t:'几乎不用',s:1},{t:'偶尔用，问简单问题',s:2},{t:'每天用，作为日常工作助手',s:3},{t:'深度用户，有自定义Prompt库',s:4}]},
+  { dim:'tool', q:'你用AI绘画工具（Midjourney/SD等）的水平？', opts:[{t:'没用过',s:1},{t:'会用基础功能，出图靠运气',s:2},{t:'能控制风格和构图，出图稳定',s:3},{t:'精通参数调优+ControlNet+工作流',s:4}]},
+  { dim:'tool', q:'你使用过多少种AI工具？', opts:[{t:'0-2种',s:1},{t:'3-5种',s:2},{t:'6-10种',s:3},{t:'10种以上，有工具选型方法论',s:4}]},
+  { dim:'tool', q:'你是否使用过AI编程工具（Copilot/Cursor等）？', opts:[{t:'没用过',s:1},{t:'试过但不常用',s:2},{t:'经常用，提升编码效率',s:3},{t:'深度依赖，非技术背景也能写代码',s:4}]},
+  { dim:'flow', q:'你是否搭建过AI自动化工作流？', opts:[{t:'没有',s:1},{t:'用过别人的模板',s:2},{t:'自己搭过简单流程',s:3},{t:'能设计复杂多步骤Agent协作流程',s:4}]},
+  { dim:'flow', q:'你了解AI Agent（智能体）的概念和应用吗？', opts:[{t:'不了解',s:1},{t:'知道概念但没实操',s:2},{t:'搭建过简单Agent',s:3},{t:'能编排多Agent协作完成复杂任务',s:4}]},
+  { dim:'flow', q:'你使用RAG（检索增强生成）技术的经验？', opts:[{t:'不知道是什么',s:1},{t:'了解概念',s:2},{t:'用过现成RAG工具',s:3},{t:'能从零搭建RAG Pipeline',s:4}]},
+  { dim:'flow', q:'你是否有自动化任务管理系统（如WorkBuddy等）？', opts:[{t:'没有',s:1},{t:'在研究',s:2},{t:'在用，跑简单任务',s:3},{t:'深度使用，30+任务最优排布',s:4}]},
+  { dim:'product', q:'你能否用AI从0设计一个产品方案？', opts:[{t:'不确定怎么做',s:1},{t:'能写简单需求文档',s:2},{t:'能做完整PRD+原型',s:3},{t:'能做市场分析+PRD+原型+数据指标',s:4}]},
+  { dim:'product', q:'你如何评估一个AI产品方案的可行性？', opts:[{t:'凭感觉',s:1},{t:'看竞品做没做',s:2},{t:'分析技术可行性和用户需求',s:3},{t:'多维评估：技术/市场/成本/合规/竞争',s:4}]},
+  { dim:'product', q:'你做过AI产品的用户调研吗？', opts:[{t:'没有',s:1},{t:'简单问了身边人',s:2},{t:'做过小规模问卷/访谈',s:3},{t:'有系统化调研方法论',s:4}]},
+  { dim:'product', q:'你设计Prompt时是否会做A/B测试？', opts:[{t:'不会',s:1},{t:'偶尔对比',s:2},{t:'有意识测试不同版本',s:3},{t:'有系统化Prompt测试和优化流程',s:4}]},
+  { dim:'arch', q:'你是否部署过AI模型或应用？', opts:[{t:'没有',s:1},{t:'用过云端API',s:2},{t:'部署过简单AI应用',s:3},{t:'能做私有化部署+RAG+多模型管理',s:4}]},
+  { dim:'arch', q:'你对向量数据库和Embedding的理解？', opts:[{t:'不了解',s:1},{t:'知道概念',s:2},{t:'用过Pinecone/Milvus等',s:3},{t:'能选型+优化+规模化部署',s:4}]},
+  { dim:'arch', q:'你是否有AI系统架构设计经验？', opts:[{t:'没有',s:1},{t:'了解基础架构',s:2},{t:'设计过中等复杂度系统',s:3},{t:'能设计企业级AI系统架构',s:4}]},
+  { dim:'arch', q:'你如何选择AI模型（自研vs API vs 开源微调）？', opts:[{t:'不知道怎么选',s:1},{t:'默认用API',s:2},{t:'根据场景对比选型',s:3},{t:'有完整选型框架（成本/性能/合规/可控性）',s:4}]},
+  { dim:'money', q:'你是否用AI赚到过钱？', opts:[{t:'没有',s:1},{t:'赚过小额（＜1万）',s:2},{t:'有稳定AI副业收入（1-5万/月）',s:3},{t:'AI是主要收入来源（5万+/月）',s:4}]},
+  { dim:'money', q:'你是否有AI内容获客的经验？', opts:[{t:'没有',s:1},{t:'发过AI内容但没系统化',s:2},{t:'有内容矩阵+稳定获客',s:3},{t:'有完整获客漏斗+数据优化',s:4}]},
+  { dim:'money', q:'你是否有私域运营和转化经验？', opts:[{t:'没有',s:1},{t:'有少量私域用户',s:2},{t:'有私域SOP+稳定转化',s:3},{t:'万人私域+自动化转化体系',s:4}]},
+  { dim:'money', q:'你是否有商业化AI产品/服务的经验？', opts:[{t:'没有',s:1},{t:'有过想法但没落地',s:2},{t:'有在售AI产品/服务',s:3},{t:'有可规模化商业模式+复购',s:4}]}
+];
+
+/* ---------- 职业匹配测试 ---------- */
+var ATLAS_QUIZ_QUESTIONS = [
+  { id:'bg', q:'你的技术背景是？', opts:[{t:'非技术背景，不会编程', v:'app'},{t:'有一点技术基础，能看懂代码', v:'tech'},{t:'资深开发者/工程师', v:'tech'},{t:'运营/营销/内容出身', v:'app'}]},
+  { id:'risk', q:'你更倾向什么风险偏好？', opts:[{t:'稳健型，先有稳定收入再探索', v:'enable'},{t:'平衡型，副业先行再转全职', v:'app'},{t:'激进型，直接全职创业', v:'biz'},{t:'看情况，有好的就上', v:'biz'}]},
+  { id:'style', q:'你更喜欢做什么类型的工作？', opts:[{t:'跟人打交道，沟通协调', v:'enable'},{t:'独立深度工作，钻研技术', v:'tech'},{t:'创意输出，内容创作', v:'app'},{t:'从0搭建系统/生意', v:'biz'}]},
+  { id:'goal', q:'你的核心目标是什么？', opts:[{t:'转行到AI相关岗位', v:'tech'},{t:'用AI提升现有工作效率', v:'app'},{t:'用AI创业/做副业赚钱', v:'biz'},{t:'帮企业做AI转型', v:'enable'}]},
+  { id:'time', q:'你每周能投入多少时间学习AI？', opts:[{t:'少于5小时', v:'app'},{t:'5-15小时', v:'enable'},{t:'15-30小时', v:'tech'},{t:'30小时以上/全职投入', v:'biz'}]}
+];
+
+/* =========================================================
+   渲染逻辑（绿系适配；"咨询/方案"按钮挂 wechat-trigger 触发企微弹窗）
+   ========================================================= */
+var _atlasFilter = 'all';
+function renderAtlas(){
+  var bar = document.getElementById('atlas-filter-bar'); if(!bar) return;
+  var html = '<button class="filter-chip active" data-cat="all" onclick="filterAtlas(\'all\')">全部</button>';
+  ATLAS_CATEGORIES.forEach(function(c){ html += '<button class="filter-chip" data-cat="'+c.id+'" onclick="filterAtlas(\''+c.id+'\')">'+c.icon+' '+c.name+'</button>'; });
+  bar.innerHTML = html; renderAtlasGrid();
+}
+function filterAtlas(cat){
+  _atlasFilter = cat;
+  document.querySelectorAll('#atlas-filter-bar .filter-chip').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-cat')===cat); });
+  renderAtlasGrid();
+}
+function renderAtlasGrid(){
+  var grid = document.getElementById('atlas-grid'); if(!grid) return;
+  var list = _atlasFilter==='all' ? CAREERS : CAREERS.filter(function(c){ return c.cat===_atlasFilter; });
+  var html='';
+  list.forEach(function(c){
+    var cat = ATLAS_CATEGORIES.find(function(x){ return x.id===c.cat; });
+    var stars=''; for(var i=0;i<5;i++) stars += i<c.difficulty?'★':'☆';
+    var riskColor = c.aiRisk==='低'?'#00e676':c.aiRisk==='中'?'#ffc107':'#ff6b6b';
+    html += '<div class="career-card">'+
+      '<div class="career-cat-tag" style="color:'+cat.color+'">'+cat.icon+' '+cat.name+'</div>'+
+      '<h3 class="career-title">'+c.title+'</h3>'+
+      '<p class="career-desc">'+c.desc+'</p>'+
+      '<div class="career-salary">'+c.salary+'/月</div>'+
+      '<div class="career-meta"><div class="meta-item"><span class="meta-label">AI替代风险</span><span class="meta-val" style="color:'+riskColor+'">'+c.aiRisk+'</span></div>'+
+      '<div class="meta-item"><span class="meta-label">转型难度</span><span class="meta-val">'+stars+'</span></div></div>'+
+      '<div class="career-skills">'+c.skills.map(function(s){return '<span class="skill-tag">'+s+'</span>';}).join('')+'</div>'+
+      '<div class="career-path"><div class="path-label">📍 学习路径</div><div class="path-steps">'+c.path.map(function(s,i){return '<div class="path-step"><span class="step-num">'+(i+1)+'</span><span>'+s+'</span></div>';}).join('')+'</div></div>'+
+      '<button class="btn btn-outline btn-sm btn-block wechat-trigger" style="margin-top:14px">咨询这个方向 →</button>'+
+    '</div>';
+  });
+  grid.innerHTML = html;
+}
+var _atlasQuiz = { step:0, answers:{} };
+function initAtlasQuiz(){ _atlasQuiz={step:0,answers:{}}; renderAtlasQuiz(); }
+function renderAtlasQuiz(){
+  var container = document.getElementById('atlas-quiz-container'); if(!container) return;
+  var q = ATLAS_QUIZ_QUESTIONS[_atlasQuiz.step];
+  if(!q){ renderAtlasQuizResult(); return; }
+  var progress = (_atlasQuiz.step/ATLAS_QUIZ_QUESTIONS.length*100).toFixed(0);
+  var html = '<div class="quiz-progress"><div class="quiz-progress-bar" style="width:'+progress+'%"></div></div>'+
+    '<div class="quiz-step">'+( _atlasQuiz.step+1)+' / '+ATLAS_QUIZ_QUESTIONS.length+'</div>'+
+    '<h3 class="quiz-question">'+q.q+'</h3><div class="quiz-options">';
+  q.opts.forEach(function(opt){ html += '<button class="quiz-option" onclick="answerAtlasQuiz(\''+opt.v+'\')">'+opt.t+'</button>'; });
+  html += '</div>';
+  if(_atlasQuiz.step>0) html += '<button class="btn btn-outline btn-sm" style="margin-top:16px" onclick="_atlasQuiz.step--;renderAtlasQuiz()">← 上一题</button>';
+  container.innerHTML = html;
+}
+function answerAtlasQuiz(val){ _atlasQuiz.answers[ATLAS_QUIZ_QUESTIONS[_atlasQuiz.step].id]=val; _atlasQuiz.step++; renderAtlasQuiz(); }
+function renderAtlasQuizResult(){
+  var container = document.getElementById('atlas-quiz-container'); if(!container) return;
+  var counts={}; Object.values(_atlasQuiz.answers).forEach(function(v){ counts[v]=(counts[v]||0)+1; });
+  var best = Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];})[0];
+  var cat = ATLAS_CATEGORIES.find(function(c){return c.id===best;});
+  var recs = CAREERS.filter(function(c){return c.cat===best;}).slice(0,3);
+  var html = '<div style="text-align:center;margin-bottom:24px"><div style="font-size:3rem;margin-bottom:12px">'+cat.icon+'</div>'+
+    '<h3 style="font-size:1.4rem;color:'+cat.color+';margin-bottom:8px">你的最优方向：'+cat.name+'</h3>'+
+    '<p style="color:#aab2aa;font-size:0.85rem">基于你的5项回答分析得出</p></div>'+
+    '<div style="margin-bottom:24px"><h4 style="color:#e8ffe8;margin-bottom:14px;font-size:0.95rem">推荐职业（点击咨询详情）：</h4>'+
+    recs.map(function(c){ return '<div class="quiz-result-card"><div class="qr-title">'+c.title+'</div><div class="qr-salary">'+c.salary+'/月</div><div class="qr-desc">'+c.desc+'</div></div>'; }).join('')+'</div>'+
+    '<button class="btn btn-primary btn-block wechat-trigger">获取这个方向的详细规划 →</button>'+
+    '<button class="btn btn-outline btn-block" style="margin-top:10px" onclick="initAtlasQuiz()">重新测试</button>';
+  container.innerHTML = html;
+}
+
+/* ---------- 赚钱引擎 ---------- */
+var _moneyFilter = 'all';
+function renderMoneyModels(){
+  var bar = document.getElementById('money-filter-bar'); if(!bar) return;
+  var html = '<button class="filter-chip active" data-cat="all" onclick="filterMoney(\'all\')">全部</button>';
+  MONEY_CATEGORIES.forEach(function(c){ html += '<button class="filter-chip" data-cat="'+c.id+'" onclick="filterMoney(\''+c.id+'\')">'+c.icon+' '+c.name+'</button>'; });
+  bar.innerHTML = html; renderMoneyGrid();
+}
+function filterMoney(cat){
+  _moneyFilter = cat;
+  document.querySelectorAll('#money-filter-bar .filter-chip').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-cat')===cat); });
+  renderMoneyGrid();
+}
+function renderMoneyGrid(){
+  var grid = document.getElementById('money-grid'); if(!grid) return;
+  var list = _moneyFilter==='all' ? MONEY_MODELS : MONEY_MODELS.filter(function(m){return m.cat===_moneyFilter;});
+  var html='';
+  list.forEach(function(m){
+    var cat = MONEY_CATEGORIES.find(function(x){return x.id===m.cat;});
+    var stars=''; for(var i=0;i<5;i++) stars += i<m.difficulty?'★':'☆';
+    html += '<div class="career-card money-card">'+
+      '<div class="career-cat-tag" style="color:'+cat.color+'">'+cat.icon+' '+cat.name+'</div>'+
+      '<h3 class="career-title">'+m.title+'</h3>'+
+      '<p class="career-desc">'+m.desc+'</p>'+
+      '<div class="money-stats">'+
+        '<div class="money-stat"><span class="ms-label">启动资金</span><span class="ms-val">'+m.invest+'</span></div>'+
+        '<div class="money-stat"><span class="ms-label">月收入预估</span><span class="ms-val" style="color:#c7ff22">'+m.income+'</span></div>'+
+        '<div class="money-stat"><span class="ms-label">回本周期</span><span class="ms-val">'+m.roi+'</span></div>'+
+        '<div class="money-stat"><span class="ms-label">上手时间</span><span class="ms-val">'+m.time+'</span></div>'+
+      '</div>'+
+      '<div class="career-skills">'+m.skills.map(function(s){return '<span class="skill-tag">'+s+'</span>';}).join('')+'</div>'+
+      '<div class="money-case"><span class="case-icon">📊</span><span>'+m.case+'</span></div>'+
+      '<button class="btn btn-outline btn-sm btn-block wechat-trigger" style="margin-top:14px">咨询这个模式 →</button>'+
+    '</div>';
+  });
+  grid.innerHTML = html;
+}
+function initMoneyCalc(){
+  var container = document.getElementById('money-calc-container'); if(!container) return;
+  container.innerHTML =
+    '<div class="calc-form">'+
+      '<div class="calc-field"><label>你每周能投入多少时间？</label><select id="calc-time" class="form-select">'+
+        '<option value="5">少于5小时</option><option value="10">5-15小时</option><option value="20">15-30小时</option><option value="40">30小时以上（全职）</option></select></div>'+
+      '<div class="calc-field"><label>你的启动资金？</label><select id="calc-budget" class="form-select">'+
+        '<option value="0">0元（零成本启动）</option><option value="1000">500-2000元</option><option value="5000">2000-10000元</option><option value="20000">10000元以上</option></select></div>'+
+      '<div class="calc-field"><label>你的AI技能水平？</label><select id="calc-skill" class="form-select">'+
+        '<option value="1">新手（刚接触AI工具）</option><option value="2">入门（会基本Prompt）</option><option value="3">熟练（有实战经验）</option><option value="4">精通（能搭建系统）</option></select></div>'+
+      '<div class="calc-field"><label>你偏好哪种变现方式？</label><select id="calc-pref" class="form-select">'+
+        '<option value="all">不限，推荐最优</option><option value="content">内容变现（写/拍/画）</option><option value="tool">工具变现（开发/自动化）</option><option value="service">服务变现（咨询/培训）</option><option value="product">产品变现（课程/SaaS）</option></select></div>'+
+      '<button class="btn btn-primary btn-block" onclick="calcMoney()" style="margin-top:20px">🧮 计算我的最优赚钱路径</button>'+
+    '</div>';
+}
+function calcMoney(){
+  var time = parseInt(document.getElementById('calc-time').value);
+  var budget = parseInt(document.getElementById('calc-budget').value);
+  var skill = parseInt(document.getElementById('calc-skill').value);
+  var pref = document.getElementById('calc-pref').value;
+  var pool = pref==='all' ? MONEY_MODELS.slice() : MONEY_MODELS.filter(function(m){return m.cat===pref;});
+  pool.forEach(function(m){
+    var score=0;
+    score += Math.max(0, 10 - Math.abs(m.difficulty - skill)*3);
+    if(budget===0 && m.invest.indexOf('0元')>=0) score+=5;
+    else if(budget===0 && m.invest.indexOf('0-')>=0) score+=4;
+    else if(budget>=1000 && m.invest.indexOf('500')>=0) score+=4;
+    else if(budget>=5000 && m.invest.indexOf('2000')>=0) score+=4;
+    else if(budget>=20000) score+=3; else score+=1;
+    if(time<=5 && m.difficulty<=2) score+=3;
+    else if(time>=20 && m.difficulty>=3) score+=3; else score+=2;
+    m._score=score;
+  });
+  pool.sort(function(a,b){return b._score-a._score;});
+  var top = pool.slice(0,3);
+  var topIncomes = top.map(function(m){return m.income;});
+  var result = document.getElementById('money-calc-result');
+  result.style.display='block';
+  result.innerHTML =
+    '<div class="calc-result">'+
+      '<div class="calc-result-banner"><div style="font-size:2.5rem">💰</div><div>'+
+        '<div class="calc-income-label">匹配路径行业收入区间</div>'+
+        '<div class="calc-income-val" style="font-size:1.3rem">'+topIncomes.join(' · ')+'</div>'+
+        '<div class="calc-income-note">上述为对应变现路径的真实案例区间（非精确预测）。实际收入取决于执行力度、城市与赛道竞争。</div></div></div>'+
+      '<h4 style="color:#e8ffe8;margin:24px 0 16px">按你的条件（'+skill+'/4技能 · '+time+'h/周 · 启动'+budget+'元）匹配度最高的3个变现路径：</h4>'+
+      top.map(function(m,i){
+        var cat = MONEY_CATEGORIES.find(function(c){return c.id===m.cat;});
+        return '<div class="calc-rec-card"><div class="rec-rank rank-'+(i+1)+'">'+(i+1)+'</div><div class="rec-content">'+
+          '<div class="rec-header"><span class="rec-cat" style="color:'+cat.color+'">'+cat.icon+' '+m.title+'</span><span class="rec-income">'+m.income+'</span></div>'+
+          '<p class="rec-desc">'+m.desc+'</p>'+
+          '<div class="rec-meta">启动:'+m.invest+' · 回本:'+m.roi+' · 上手:'+m.time+'</div>'+
+          '<div class="rec-case">📊 案例：'+m.case+'</div></div></div>';
+      }).join('')+
+      '<div class="calc-honest-note">⚠️ 以上收入为公开案例区间，仅供参考。平台不承诺收益，落地靠你的行动。建议从投入最低、回本最快的模型起步。</div>'+
+      '<div id="ai-money-advice" style="margin-top:20px"></div>'+
+      '<button class="btn btn-outline btn-block" style="margin-top:12px" onclick="getAIMoneyAdvice()">🤖 让AI军师按我的条件给定制起步方案</button>'+
+    '</div>';
+  setTimeout(function(){ result.scrollIntoView({behavior:'smooth'}); }, 100);
+  window._lastCalcParams = { time:time, budget:budget, skill:skill, pref:pref, top:top };
+}
+function getAIMoneyAdvice(){
+  var container = document.getElementById('ai-money-advice'); if(!container||!window._lastCalcParams) return;
+  var p = window._lastCalcParams;
+  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">💡 <b>定制起步建议（离线版）</b>：基于你的条件，建议优先尝试系统推荐的 Top1 路径。第一周：花2天学习基础工具，花3天完成第一个最小可行产出，花2天在小红书/抖音发布测试市场反应。先跑通最小闭环，再考虑放大。\n（注：部署 AI 后端并配置 Key 后，此处将显示 AI 实时生成的专属方案。）</div></div>';
+}
+
+/* ---------- 内容工坊 ---------- */
+var _workshopFilter = 'all';
+function renderWorkshop(){
+  var bar = document.getElementById('workshop-filter-bar'); if(!bar) return;
+  var html = '<button class="filter-chip active" data-cat="all" onclick="filterWorkshop(\'all\')">全部</button>';
+  WORKSHOP_CATEGORIES.forEach(function(c){ html += '<button class="filter-chip" data-cat="'+c.id+'" onclick="filterWorkshop(\''+c.id+'\')">'+c.icon+' '+c.name+'</button>'; });
+  bar.innerHTML = html; renderWorkshopGrid();
+}
+function filterWorkshop(cat){
+  _workshopFilter = cat;
+  document.querySelectorAll('#workshop-filter-bar .filter-chip').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-cat')===cat); });
+  renderWorkshopGrid();
+}
+function _sampleFor(key){
+  var k=key||'';
+  if(k.indexOf('领域')>=0) return 'AI副业/家庭教育/职场效率';
+  if(k.indexOf('受众')>=0||k.indexOf('人群')>=0||k.indexOf('读者')>=0||k.indexOf('用户')>=0) return '25-35岁职场新人';
+  if(k.indexOf('产品')>=0) return 'AI写作助手/减肥课程';
+  if(k.indexOf('卖点')>=0) return '省钱/省时/效果好';
+  if(k.indexOf('主题')>=0) return '普通人如何用AI副业月入过万';
+  if(k.indexOf('选题')>=0) return '3个被低估的AI赚钱赛道';
+  if(k.indexOf('价格')>=0) return '199元';
+  if(k.indexOf('项目')>=0) return 'OPC-AI创就业平台';
+  if(k.indexOf('市场')>=0) return '2026年AI副业市场规模超千亿';
+  if(k.indexOf('模式')>=0) return 'SaaS订阅+私域陪跑';
+  if(k.indexOf('团队')>=0) return '单人+AI自动化矩阵';
+  if(k.indexOf('人设')>=0) return '实战派AI创富教练';
+  if(k.indexOf('库存')>=0) return '200件';
+  return '在这里填写你的具体内容';
+}
+function renderWorkshopGrid(){
+  var grid = document.getElementById('workshop-grid'); if(!grid) return;
+  var list = _workshopFilter==='all' ? PROMPTS : PROMPTS.filter(function(p){return p.cat===_workshopFilter;});
+  var html='';
+  list.forEach(function(p,idx){
+    var cat = WORKSHOP_CATEGORIES.find(function(x){return x.id===p.cat;});
+    var promptId='prompt-'+idx, formId='form-'+idx, resultId='ai-result-'+idx;
+    var placeholders = (p.prompt.match(/\{[^}]+\}/g)||[]).map(function(ph){return ph.replace(/[{}]/g,'');});
+    var uniquePh=[]; placeholders.forEach(function(k){ if(uniquePh.indexOf(k)<0) uniquePh.push(k); });
+    var formHtml='';
+    if(uniquePh.length>0){
+      formHtml = '<div class="prompt-form" id="'+formId+'"><div class="prompt-form-title">✍️ 填写你的真实信息，AI据此生成可带走的内容：</div>'+
+        uniquePh.map(function(k){ return '<div class="prompt-form-field"><label>'+k+'</label><input type="text" class="prompt-input" data-key="'+k+'" placeholder="例如：'+_sampleFor(k)+'"></div>'; }).join('')+
+        '<button class="btn btn-primary btn-block" onclick="aiGenerate('+idx+',\''+resultId+'\')">🤖 生成我的专属Prompt</button></div>';
+    } else {
+      formHtml = '<button class="btn btn-primary btn-block" onclick="aiGenerate('+idx+',\''+resultId+'\')">🤖 直接生成</button>';
+    }
+    html += '<div class="prompt-card">'+
+      '<div class="prompt-header"><span class="career-cat-tag" style="color:'+cat.color+'">'+cat.icon+' '+cat.name+'</span>'+
+        '<div class="prompt-actions"><button class="copy-btn" onclick="copyPrompt(\''+promptId+'\')">📋 复制</button></div></div>'+
+      '<h3 class="prompt-title">'+p.title+'</h3>'+
+      '<p class="prompt-usecase">📌 '+p.useCase+'</p>'+
+      '<div class="prompt-body" id="'+promptId+'">'+p.prompt.replace(/\n/g,'<br>')+'</div>'+
+      '<div class="prompt-tips">💡 '+p.tips+'</div>'+
+      formHtml +
+      '<div class="ai-gen-result" id="'+resultId+'"></div>'+
+    '</div>';
+  });
+  grid.innerHTML = html;
+}
+function aiGenerate(promptIdx, resultId){
+  var prompt = PROMPTS[promptIdx]; if(!prompt) return;
+  var container = document.getElementById(resultId); if(!container) return;
+  var placeholders = (prompt.prompt.match(/\{[^}]+\}/g)||[]).map(function(ph){return ph.replace(/[{}]/g,'');});
+  var uniquePh=[]; placeholders.forEach(function(k){ if(uniquePh.indexOf(k)<0) uniquePh.push(k); });
+  var userInputs={}; var missing=[];
+  uniquePh.forEach(function(k){
+    var input = document.querySelector('#form-'+promptIdx+' .prompt-input[data-key="'+k+'"]');
+    var val = input ? (input.value||'').trim() : '';
+    if(!val) missing.push(k);
+    userInputs[k]=val;
+  });
+  if(missing.length>0){
+    container.style.display='block';
+    container.innerHTML = '<div class="ai-report-card" style="border-color:#ffc107"><div class="ai-report-body" style="color:#ffc107">⚠️ 请先填写：'+missing.join('、')+'，AI才能为你生成真实可用的内容。</div></div>';
+    return;
+  }
+  var final = prompt.prompt;
+  Object.keys(userInputs).forEach(function(k){ final = final.replace(new RegExp('\\{'+k+'\\}','g'), userInputs[k]); });
+  container.style.display='block';
+  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 已为你组装专属Prompt</span>'+
+    '<button class="copy-btn" onclick="copyText(\''+resultId+'-content\')">📋 复制</button></div>'+
+    '<div class="ai-report-body" id="'+resultId+'-content">'+final.replace(/\n/g,'<br>')+'</div>'+
+    '<div class="ai-report-foot">把以上内容粘贴给任意 AI（DeepSeek/ChatGPT/豆包），即可得到你的专属内容。配置后端 Key 后此处可直接出稿。</div></div>';
+}
+function copyText(elementId){
+  var el=document.getElementById(elementId); if(!el) return;
+  var text=el.innerText;
+  if(navigator.clipboard){ navigator.clipboard.writeText(text).then(function(){showToast('已复制！');}); }
+  else { var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); showToast('已复制！'); }
+}
+function copyPrompt(id){
+  var el=document.getElementById(id); if(!el) return;
+  var text=el.innerText;
+  if(navigator.clipboard){ navigator.clipboard.writeText(text).then(function(){showToast('Prompt已复制！');}); }
+  else { var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); showToast('Prompt已复制！'); }
+}
+function showToast(msg){
+  var t=document.createElement('div'); t.className='toast-msg'; t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(function(){t.classList.add('show');},10);
+  setTimeout(function(){t.classList.remove('show');setTimeout(function(){t.remove();},300);},2500);
+}
+
+/* ---------- 能力测评 ---------- */
+var _assess = { step:0, answers:{} };
+function initAssessment(){
+  var c = document.getElementById('assess-container');
+  if(!c) return;
+  _assess={step:0,answers:{}};
+  c.innerHTML = '<div class="assess-intro"><h3>AI 能力测评 · 20 题</h3><p>3 分钟测出你的 AI 能力画像，生成专属提升路线图。</p><button class="btn btn-primary btn-block" onclick="renderAssessment()">开始测评 →</button></div>';
+}
+function renderAssessment(){
+  var container=document.getElementById('assess-container'); if(!container) return;
+  if(_assess.step < QUIZ_QUESTIONS.length){
+    var q=QUIZ_QUESTIONS[_assess.step];
+    var dim=ASSESS_DIMENSIONS.find(function(d){return d.id===q.dim;});
+    var progress=(_assess.step/QUIZ_QUESTIONS.length*100).toFixed(0);
+    var html='<div class="quiz-progress"><div class="quiz-progress-bar" style="width:'+progress+'%"></div></div>'+
+      '<div class="quiz-step">'+dim.icon+' '+dim.name+' · '+(_assess.step+1)+'/'+QUIZ_QUESTIONS.length+'</div>'+
+      '<h3 class="quiz-question">'+q.q+'</h3><div class="quiz-options">';
+    q.opts.forEach(function(opt){ html+='<button class="quiz-option" onclick="answerAssess(\''+opt.s+'\',\''+q.dim+'\')">'+opt.t+'</button>'; });
+    html+='</div>';
+    if(_assess.step>0) html+='<button class="btn btn-outline btn-sm" style="margin-top:16px" onclick="_assess.step--;renderAssessment()">← 上一题</button>';
+    container.innerHTML=html;
+  } else { renderAssessResult(); }
+}
+function answerAssess(score,dim){
+  if(!_assess.answers[dim]) _assess.answers[dim]=[];
+  _assess.answers[dim].push(parseInt(score));
+  _assess.step++; renderAssessment();
+}
+function renderAssessResult(){
+  var container=document.getElementById('assess-container'); if(!container) return;
+  var scores={}, maxScores={};
+  ASSESS_DIMENSIONS.forEach(function(d){
+    var arr=_assess.answers[d.id]||[];
+    var sum=arr.reduce(function(a,b){return a+b;},0);
+    scores[d.id]=arr.length>0?(sum/arr.length):0; maxScores[d.id]=4;
+  });
+  var totalScore=Object.values(scores).reduce(function(a,b){return a+b;},0);
+  var maxTotal=Object.values(maxScores).reduce(function(a,b){return a+b;},0);
+  var percent=(totalScore/maxTotal*100).toFixed(0);
+  var level,levelColor,levelDesc;
+  if(percent>=85){level='S级 · AI架构师';levelColor='#ff00e5';levelDesc='你已具备AI架构师级能力，可以独立设计企业级AI系统';}
+  else if(percent>=70){level='A级 · AI专家';levelColor='#7b2dff';levelDesc='你在多个维度有扎实能力，可以开始商业化AI项目';}
+  else if(percent>=50){level='B级 · AI熟练者';levelColor='#00d4ff';levelDesc='你有不错的AI基础，重点突破薄弱维度即可跃迁';}
+  else if(percent>=30){level='C级 · AI入门者';levelColor='#ffc107';levelDesc='你刚踏入AI世界，选1-2个方向系统学习即可快速提升';}
+  else {level='D级 · AI新手';levelColor='#ff6b6b';levelDesc='不要焦虑，每个人都是从零开始——关键是现在开始行动';}
+  var weakest=ASSESS_DIMENSIONS.map(function(d){return {dim:d,score:scores[d.id],percent:(scores[d.id]/maxScores[d.id]*100)};}).sort(function(a,b){return a.percent-b.percent;});
+  var radarHTML=generateRadarChart(scores,maxScores);
+  var html=
+    '<div class="assess-result">'+
+      '<div class="assess-level" style="border-color:'+levelColor+'">'+
+        '<div class="level-badge" style="background:'+levelColor+'">'+percent+'%</div>'+
+        '<div><div class="level-title" style="color:'+levelColor+'">'+level+'</div><div class="level-desc">'+levelDesc+'</div></div>'+
+      '</div>'+
+      '<div class="assess-radar">'+radarHTML+'</div>'+
+      '<div class="assess-dims">'+ASSESS_DIMENSIONS.map(function(d){
+        var s=scores[d.id]; var p=(s/maxScores[d.id]*100).toFixed(0);
+        var barColor=p>=75?'#00e676':p>=50?'#00d4ff':p>=25?'#ffc107':'#ff6b6b';
+        return '<div class="dim-bar"><div class="dim-bar-header"><span>'+d.icon+' '+d.name+'</span><span style="color:'+barColor+'">'+p+'%</span></div><div class="dim-bar-track"><div class="dim-bar-fill" style="width:'+p+'%;background:'+barColor+'"></div></div></div>';
+      }).join('')+'</div>'+
+      '<div class="assess-advice"><h4 style="color:#c7ff22;margin-bottom:12px">📋 逐维度提升行动清单</h4>'+
+        '<p style="color:#aab2aa;font-size:0.82rem;margin-bottom:14px">下面每项都是你可以立刻执行的具体动作，不依赖任何付费服务，今天就能开始。</p>'+
+        ASSESS_DIMENSIONS.map(function(d){
+          var p=(scores[d.id]/maxScores[d.id]*100).toFixed(0);
+          var advice=ASSESS_ADVICE[d.id]||[];
+          var list=advice.map(function(a){return '<li>'+a+'</li>';}).join('');
+          return '<div class="adv-dim-block"><div class="adv-dim-head"><span>'+d.icon+' '+d.name+'</span><span class="adv-dim-pct" style="color:'+(p>=75?'#00e676':p>=50?'#00d4ff':p>=25?'#ffc107':'#ff6b6b')+'">'+p+'%</span></div><ul class="adv-dim-list">'+list+'</ul></div>';
+        }).join('')+
+      '</div>'+
+      '<button class="btn btn-primary btn-block wechat-trigger" style="margin-top:8px">加澄导领你的专属提升方案 →</button>'+
+      '<button class="btn btn-outline btn-block" style="margin-top:10px" onclick="initAssessment()">重新测评</button>'+
+    '</div>';
+  container.innerHTML=html;
+}
+function generateRadarChart(scores,maxScores){
+  var dims=ASSESS_DIMENSIONS; var n=dims.length; var cx=150,cy=150,r=110;
+  var html='<svg viewBox="0 0 300 300" style="max-width:300px;margin:0 auto;display:block">';
+  for(var layer=1;layer<=4;layer++){
+    var lr=r*layer/4; var pts='';
+    for(var i=0;i<n;i++){ var a=-Math.PI/2+(i*2*Math.PI/n); pts+=(cx+lr*Math.cos(a))+','+(cy+lr*Math.sin(a))+' '; }
+    html+='<polygon points="'+pts+'" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>';
+  }
+  for(var i=0;i<n;i++){ var a=-Math.PI/2+(i*2*Math.PI/n); html+='<line x1="'+cx+'" y1="'+cy+'" x2="'+(cx+r*Math.cos(a))+'" y2="'+(cy+r*Math.sin(a))+'" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>'; }
+  var dataPts='';
+  for(var i=0;i<n;i++){ var a=-Math.PI/2+(i*2*Math.PI/n); var val=scores[dims[i].id]/maxScores[dims[i].id]; var dr=r*val; dataPts+=(cx+dr*Math.cos(a))+','+(cy+dr*Math.sin(a))+' '; }
+  html+='<polygon points="'+dataPts+'" fill="rgba(199,255,34,0.15)" stroke="#c7ff22" stroke-width="2"/>';
+  for(var i=0;i<n;i++){ var a=-Math.PI/2+(i*2*Math.PI/n); var val=scores[dims[i].id]/maxScores[dims[i].id]; var dr=r*val; html+='<circle cx="'+(cx+dr*Math.cos(a))+'" cy="'+(cy+dr*Math.sin(a))+'" r="4" fill="#c7ff22"/>'; }
+  for(var i=0;i<n;i++){ var a=-Math.PI/2+(i*2*Math.PI/n); var lr=r+22; var lx=cx+lr*Math.cos(a); var ly=cy+lr*Math.sin(a); html+='<text x="'+lx+'" y="'+ly+'" text-anchor="middle" dominant-baseline="middle" fill="rgba(255,255,255,0.6)" font-size="11">'+dims[i].icon+'</text>'; }
+  html+='</svg>';
+  return html;
+}
+
+/* ---------- Tab 切换 + 初始化 ---------- */
+function switchAITab(tab){
+  document.querySelectorAll('.ai-tab').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-tab')===tab); });
+  ['assess','money','atlas','workshop'].forEach(function(t){ var p=document.getElementById('panel-'+t); if(p) p.style.display = (t===tab)?'block':'none'; });
+}
+(function(){
+  renderAtlas(); renderMoneyModels(); renderWorkshop(); initAssessment();
+  switchAITab('assess');
+})();
+</script>
 </body>
 </html>
