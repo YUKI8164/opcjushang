@@ -6,6 +6,18 @@
 <title>OPC-AI｜让每一个不甘平凡的人重启未来</title>
 <meta name="description" content="OPC-AI 用智能工具与真实连接，陪不甘平凡的人重启未来。扫码加澄导，领专属 AI 成长地图、一人公司落地手册，进入创就业合伙人内测圈。"/>
 <meta name="theme-color" content="#0a0b0b"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%9E%3C/text%3E%3C/svg%3E"/>
+<!-- 社交分享卡：朋友圈/微信转发有图有标题 -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="OPC-AI｜让每一个不甘平凡的人重启未来"/>
+<meta property="og:description" content="免费用 Agnes 开源大模型：文字对话/文生图/文生视频。加澄导领激活码，领专属 AI 成长地图与一人公司落地手册。"/>
+<meta property="og:url" content="https://opcjushang.cn/"/>
+<meta property="og:image" content="https://opcjushang.cn/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="OPC-AI｜让每一个不甘平凡的人重启未来"/>
+<meta name="twitter:description" content="免费用 Agnes 开源大模型：文字对话/文生图/文生视频。加澄导领激活码，领专属 AI 成长地图与一人公司落地手册。"/>
+<meta name="twitter:image" content="https://opcjushang.cn/og-image.png"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"OPC-AI","url":"https://opcjushang.cn/","description":"OPC-AI 用智能工具与真实连接，陪不甘平凡的人重启未来。"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+SC:wght@400;500;700;800;900&display=swap" rel="stylesheet">
@@ -498,6 +510,7 @@
   <button class="lk-btn wechat-trigger">加澄导 · 领激活码</button>
   <button class="lk-btn" style="background:#1c1e1b;color:#fff;margin-top:10px" onclick="openActivate()">已有激活码？点此输入 →</button>
   <button class="lk-link" onclick="openWBCfgFromLock()">🤖 我有自己的开源模型密钥？免激活直接用 →</button>
+  <button class="lk-link" onclick="startDemoTry()">🎁 不想加企微？免激活试玩 3 次 →</button>
 </div>
   </div>
 
@@ -516,6 +529,7 @@
   <button class="lk-btn wechat-trigger">加澄导 · 领激活码</button>
   <button class="lk-btn" style="background:#1c1e1b;color:#fff;margin-top:10px" onclick="openActivate()">已有激活码？点此输入 →</button>
   <button class="lk-link" onclick="openWBCfgFromLock()">🤖 我有自己的开源模型密钥？免激活直接用 →</button>
+  <button class="lk-link" onclick="startDemoTry()">🎁 不想加企微？免激活试玩 3 次 →</button>
 </div>
   </div>
 
@@ -534,6 +548,7 @@
   <button class="lk-btn wechat-trigger">加澄导 · 领激活码</button>
   <button class="lk-btn" style="background:#1c1e1b;color:#fff;margin-top:10px" onclick="openActivate()">已有激活码？点此输入 →</button>
   <button class="lk-link" onclick="openWBCfgFromLock()">🤖 我有自己的开源模型密钥？免激活直接用 →</button>
+  <button class="lk-link" onclick="startDemoTry()">🎁 不想加企微？免激活试玩 3 次 →</button>
 </div>
   </div>
 </section><section class="join-section" id="join">
@@ -618,7 +633,7 @@
   // 事件委托：覆盖静态 + AI 赋能中心动态生成的 .wechat-trigger 按钮
   document.addEventListener('click', function(e){
     var el = e.target.closest ? e.target.closest('.wechat-trigger') : null;
-    if(el){ e.preventDefault(); openWechat(e); }
+    if(el){ e.preventDefault(); if(typeof opcTrack==='function') opcTrack('wechat_click'); openWechat(e); }
   });
   if(modal){modal.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeWechat)});
     var fb=document.getElementById('wechatFallback');
@@ -684,6 +699,57 @@ var OPC_CODE_MAP = {
 };
 function resolveKey(code) { return (OPC_CODE_MAP[code] || code); }
 
+// ===== 免激活试玩（降低转化漏斗第一关流失）=====
+// 用内置 demo 激活码自动激活，本地限次；用完强制走真实激活（加企微领码）。
+// DEMO key 由构建脚本注入（内置占位符），留空则试玩不可用。
+var OPC_DEMO_CODE = 'OPC-DEMO-TRY';
+var OPC_DEMO_MAX = 3;
+var OPC_DEMO_LS = 'opc_demo_used';
+var OPC_DEMO_FLAG = 'opc_demo';
+var OPC_DEMO_KEY = 'sk-bNY6Ux1DzexnK6l2W7ynR3ymh4EWqmr2JUrbqqFbanBy6jjr';
+if (OPC_DEMO_KEY && OPC_DEMO_KEY.indexOf('__') !== 0) { OPC_CODE_MAP[OPC_DEMO_CODE] = OPC_DEMO_KEY; }
+function opcDemoUsed() { try { return parseInt(localStorage.getItem(OPC_DEMO_LS) || '0', 10) || 0; } catch (e) { return 0; } }
+function opcDemoLeft() { return Math.max(0, OPC_DEMO_MAX - opcDemoUsed()); }
+function opcIsDemo() { try { return localStorage.getItem(OPC_DEMO_FLAG) === '1'; } catch (e) { return false; } }
+function opcStartDemo() {
+  if (opcDemoLeft() <= 0) return false;
+  agnesSetKey(resolveKey(OPC_DEMO_CODE));
+  opcSetSrc('agnes');
+  try { localStorage.setItem(OPC_DEMO_FLAG, '1'); } catch (e) {}
+  return true;
+}
+// 试玩计次；返回 true 表示已用完（调用方应清锁）
+function opcDemoCountOne() {
+  if (!opcIsDemo()) return false;
+  var n = opcDemoUsed() + 1;
+  try { localStorage.setItem(OPC_DEMO_LS, String(n)); } catch (e) {}
+  if (n >= OPC_DEMO_MAX) {
+    agnesSetKey('');
+    try { localStorage.removeItem(OPC_DEMO_FLAG); } catch (e) {}
+    return true;
+  }
+  return false;
+}
+
+// ===== 轻量转化埋点（隐私友好：仅本地计数 + 可选上报）=====
+var OPC_ANALYTICS_URL = ''; // 燕子姐后续可填 Cloudflare Worker / 自建上报地址
+var OPC_EVENT_LS = 'opc_events';
+function opcTrack(event, data) {
+  try {
+    var log = JSON.parse(localStorage.getItem(OPC_EVENT_LS) || '{}');
+    log[event] = (log[event] || 0) + 1;
+    localStorage.setItem(OPC_EVENT_LS, JSON.stringify(log));
+  } catch (e) {}
+  if (OPC_ANALYTICS_URL) {
+    try {
+      var payload = JSON.stringify({ event: event, data: data || {}, t: Date.now() });
+      if (navigator.sendBeacon) navigator.sendBeacon(OPC_ANALYTICS_URL, payload);
+      else fetch(OPC_ANALYTICS_URL, { method: 'POST', body: payload, keepalive: true }).catch(function () {});
+    } catch (e) {}
+  }
+  if (window.console && console.debug) console.debug('[opc-track]', event, data || '');
+}
+
 // 校验激活码：用 /v1/models 探活（无需消耗额度）
 async function agnesValidate(code) {
   var key = resolveKey(code);
@@ -715,15 +781,59 @@ async function opcChat(messages, opts) {
 }
 
 // 文字大模型对话
+// 带超时 + 503/429 自动重试的 fetch 封装（Agnes 偶发 busy，必须兜底）
+async function agnesFetch(path, init, opt) {
+  opt = opt || {};
+  var retries = (opt.retries != null) ? opt.retries : 2;
+  var timeoutMs = opt.timeoutMs || 60000;
+  var baseDelay = opt.delay || 1500;
+  var attempt = 0;
+  async function run() {
+    var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, timeoutMs) : null;
+    try {
+      var r = await fetch(AGNES_BASE + path, Object.assign({}, init, ctrl ? { signal: ctrl.signal } : {}));
+      if (r.ok) return r;
+      // 服务端繁忙/限流 → 重试
+      if ((r.status === 503 || r.status === 429) && attempt < retries) {
+        attempt++;
+        await new Promise(function (res) { setTimeout(res, baseDelay * attempt); });
+        return run();
+      }
+      var errTxt = await r.text();
+      throw new Error('Agnes 请求失败(' + r.status + '): ' + errTxt.slice(0, 120));
+    } catch (e) {
+      if (e && e.message && e.message.indexOf('Agnes 请求失败(503)') === 0 && attempt <= retries) {
+        attempt++;
+        await new Promise(function (res) { setTimeout(res, baseDelay * attempt); });
+        return run();
+      }
+      if (e && e.name === 'AbortError') throw new Error('Agnes 响应超时，请稍后重试');
+      throw e;
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
+  }
+  return run();
+}
+
+// 把底层异常转成用户能看懂的提示
+function agnesFriendlyErr(e) {
+  var m = (e && e.message) || '';
+  if (m.indexOf('503') >= 0 || m.toLowerCase().indexOf('service busy') >= 0)
+    return '🚧 生图服务暂时繁忙，已自动重试仍失败。请稍等 1 分钟再试，或换种描述。';
+  if (m.indexOf('超时') >= 0) return '⏳ 响应超时，Agnes 可能正在加载模型，请重试一次。';
+  if (m.indexOf('429') >= 0) return '⏳ 请求过于频繁，请稍候再试。';
+  return '⚠️ ' + (m || '未知错误');
+}
+
 async function agnesChat(messages, model, signal) {
   model = model || AGNES_TEXT_MODELS[0];
-  var r = await fetch(AGNES_BASE + '/v1/chat/completions', {
+  var r = await agnesFetch('/v1/chat/completions', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer ' + agnesGetKey(), 'Content-Type': 'application/json' },
-    body: JSON.stringify({ model: model, messages: messages, stream: false }),
-    signal: signal
-  });
-  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 对话失败(' + r.status + '): ' + t.slice(0, 120)); }
+    body: JSON.stringify({ model: model, messages: messages, stream: false })
+  }, { retries: 1, timeoutMs: 90000, signal: signal });
   var j = await r.json();
   return (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '';
 }
@@ -733,12 +843,11 @@ async function agnesImage(prompt, opts) {
   opts = opts || {};
   var body = { model: AGNES_IMG_MODEL, prompt: prompt, size: opts.size || '1024x1024' };
   if (opts.image) body.image = opts.image; // 图生图：图片 URL
-  var r = await fetch(AGNES_BASE + '/v1/images/generations', {
+  var r = await agnesFetch('/v1/images/generations', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer ' + agnesGetKey(), 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
-  });
-  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 生图失败(' + r.status + '): ' + t.slice(0, 120)); }
+  }, { retries: 2, timeoutMs: 120000, delay: 2000 });
   var j = await r.json();
   return (j.data && j.data[0] && j.data[0].url) || '';
 }
@@ -755,22 +864,20 @@ async function agnesVideoCreate(prompt, opts) {
     frame_rate: opts.frame_rate || 24
   };
   if (opts.image) body.image = opts.image;
-  var r = await fetch(AGNES_BASE + '/v1/videos', {
+  var r = await agnesFetch('/v1/videos', {
     method: 'POST',
     headers: { 'Authorization': 'Bearer ' + agnesGetKey(), 'Content-Type': 'application/json' },
     body: JSON.stringify(body)
-  });
-  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 视频创建失败(' + r.status + '): ' + t.slice(0, 120)); }
+  }, { retries: 2, timeoutMs: 60000, delay: 2000 });
   var j = await r.json();
   return j.video_id || j.id || '';
 }
 
 // 视频：轮询结果（completed 时返回 url）
 async function agnesVideoPoll(videoId) {
-  var r = await fetch(AGNES_BASE + '/agnesapi?video_id=' + encodeURIComponent(videoId), {
+  var r = await agnesFetch('/agnesapi?video_id=' + encodeURIComponent(videoId), {
     headers: { 'Authorization': 'Bearer ' + agnesGetKey() }
-  });
-  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 视频查询失败(' + r.status + '): ' + t.slice(0, 120)); }
+  }, { retries: 3, timeoutMs: 20000, delay: 1000 });
   var j = await r.json();
   return { status: j.status, url: j.url || '', progress: j.internal_progress || 0 };
 }
@@ -825,9 +932,15 @@ async function wbChatSend() {
     think.remove();
     _wbMessages.push({ role: 'assistant', content: reply });
     msgs.appendChild(mkMsg('ai', reply));
+    opcTrack('chat_send');
+    // 试玩限次：用完则收回
+    if (opcDemoCountOne()) {
+      refreshWorkbenchLock();
+      setTimeout(function(){ alert('🎁 免激活试玩已用完 3 次。加澄导企微领激活码，解锁无限次免费 AI～'); }, 300);
+    }
   } catch (e) {
     think.remove();
-    msgs.appendChild(mkMsg('ai', '⚠️ ' + e.message));
+    msgs.appendChild(mkMsg('ai', agnesFriendlyErr(e)));
   }
   msgs.scrollTop = msgs.scrollHeight;
   send.disabled = false;
@@ -882,6 +995,18 @@ function saveWBCfg() {
 }
 // 锁层里的"我有自己的密钥"入口
 function openWBCfgFromLock() { opcSetSrc('custom'); syncSrcUI(); openWBCfg(); }
+// 锁层里的"免激活试玩"入口（本地限次，用完强制激活）
+function startDemoTry() {
+  if (opcDemoLeft() <= 0) { openActivate(); return; }
+  var ok = opcStartDemo();
+  if (ok) {
+    refreshWorkbenchLock();
+    opcTrack('demo_start');
+    setTimeout(function () {
+      alert('🎁 已开启免激活试玩，剩余 ' + opcDemoLeft() + ' 次。\n加澄导企微领激活码，可解锁无限次 + 文生图/视频全部功能。');
+    }, 300);
+  } else { openActivate(); }
+}
 function mkMsg(cls, text) {
   var d = document.createElement('div');
   d.className = 'wb-msg ' + cls;
@@ -903,8 +1028,10 @@ async function wbImageGen() {
     if (url) {
       res.innerHTML = '<img src="' + url + '" alt="生成结果"/>';
       status.className = 'wb-status ok'; status.textContent = '✅ 生成完成，右键可保存';
+      opcTrack('image_gen');
+      if (opcDemoCountOne()) { refreshWorkbenchLock(); }
     } else { status.className = 'wb-status err'; status.textContent = '未返回图片，请重试'; }
-  } catch (e) { status.className = 'wb-status err'; status.textContent = e.message; }
+  } catch (e) { status.className = 'wb-status err'; status.textContent = agnesFriendlyErr(e); }
   btn.disabled = false;
 }
 
@@ -937,7 +1064,7 @@ async function wbVideoGen() {
       }
     }
     if (!done) { prog.className = 'wb-status'; prog.textContent = '生成时间较长，可稍后刷新本页查看结果'; }
-  } catch (e) { prog.className = 'wb-status err'; prog.textContent = e.message; }
+  } catch (e) { prog.className = 'wb-status err'; prog.textContent = agnesFriendlyErr(e); }
   btn.disabled = false;
 }
 
@@ -961,8 +1088,10 @@ async function doActivate() {
   if (ok) {
     agnesSetKey(resolveKey(code));
     opcSetSrc('agnes');
+    try { localStorage.removeItem(OPC_DEMO_FLAG); localStorage.setItem(OPC_DEMO_LS, '0'); } catch (e) {}
     closeActivate();
     refreshWorkbenchLock();
+    opcTrack('activate_success');
   } else {
     err.textContent = '激活码无效，请确认后重试（加澄导企微领取）';
   }
@@ -984,6 +1113,7 @@ async function agnesGenWorkshop(resultId) {
   try {
     var reply = await opcChat([{ role: 'user', content: final }], { model: 'agnes-1.5-flash' });
     out.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 生成内容</span><button class="copy-btn" onclick="copyText(\'' + resultId + '-out-content\')">📋 复制</button></div><div class="ai-report-body" id="' + resultId + '-out-content">' + reply.replace(/\n/g, '<br>') + '</div></div>';
+    opcTrack('tool_workshop');
   } catch (e) {
     out.innerHTML = '<div class="ai-report-body" style="color:#ff9b9b">⚠️ ' + e.message + '</div>';
   }
@@ -1330,6 +1460,7 @@ async function getAIMoneyAdvice(){
   try{
     var reply = await agnesChat([{role:'user',content:prompt}], 'agnes-1.5-flash');
     container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 军师专属方案（Agnes 实时生成）</span><button class="copy-btn" onclick="copyText(\'ai-money-advice-content\')">📋 复制</button></div><div class="ai-report-body" id="ai-money-advice-content">'+reply.replace(/\n/g,'<br>')+'</div></div>';
+    if(typeof opcTrack==='function') opcTrack('tool_money');
   }catch(e){
     container.innerHTML = '<div class="ai-report-card" style="border-color:#ff6b6b"><div class="ai-report-body" style="color:#ff9b9b">⚠️ '+e.message+'</div></div>';
   }
