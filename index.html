@@ -268,6 +268,114 @@
   .assess-dims{grid-template-columns:1fr}
   .money-stats{grid-template-columns:1fr 1fr}
 }
+
+/* === 开源模型免费舱（引流-锁流主基地） === */
+.workbench{max-width:1080px;margin:0 auto;padding:72px 24px 12px}
+.wb-kicker{color:var(--lime);letter-spacing:.18em;font:700 12px Barlow Condensed;text-align:center}
+.wb-title{text-align:center;color:#fff;font-size:30px;font-weight:900;margin:12px 0 14px;letter-spacing:-.02em;line-height:1.25}
+.wb-title em{color:var(--lime);font-style:normal}
+.wb-sub{text-align:center;color:#aab2aa;font-size:14px;line-height:1.7;max-width:620px;margin:0 auto 30px}
+.wb-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:24px}
+.wb-tab{background:#12151280;border:1px solid #ffffff1f;color:#cfd6cf;font:700 14px/1 "Noto Sans SC",sans-serif;padding:12px 22px;border-radius:50px;cursor:pointer;transition:.2s}
+.wb-tab:hover{border-color:#c7ff2255;color:#fff}
+.wb-tab.active{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.wb-panel{position:relative;background:#0e130e;border:1px solid #ffffff1f;border-radius:18px;padding:24px;min-height:340px}
+.wb-status{color:#aab2aa;font-size:13px;line-height:1.7}
+.wb-status.err{color:#ff9b9b}
+.wb-status.ok{color:#c7ff22}
+
+/* 对话 */
+.wb-chat{display:flex;flex-direction:column;height:420px}
+.wb-msgs{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:12px;padding:6px 4px 14px}
+.wb-msg{max-width:82%;padding:11px 15px;border-radius:14px;font-size:14px;line-height:1.7;white-space:pre-wrap;word-break:break-word}
+.wb-msg.ai{background:#1c1e1b;color:#e8ffe8;align-self:flex-start;border-bottom-left-radius:4px}
+.wb-msg.me{background:var(--lime);color:#0a0b0b;align-self:flex-end;border-bottom-right-radius:4px;font-weight:600}
+.wb-msg.thinking{color:#8a928a;font-style:italic}
+.wb-input-row{display:flex;gap:10px;align-items:flex-end;margin-top:10px}
+.wb-input-row textarea{flex:1;min-height:52px;max-height:140px;resize:vertical;background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:12px;padding:12px 14px;font:400 14px/1.5 "Noto Sans SC",sans-serif;outline:none}
+.wb-input-row textarea:focus{border-color:var(--lime)}
+.wb-model-sel{background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:10px;padding:0 10px;font-size:13px;height:52px;outline:none}
+.wb-send{background:var(--lime);color:var(--ink);border:0;border-radius:12px;padding:0 22px;height:52px;font:800 14px/1 "Noto Sans SC",sans-serif;cursor:pointer;white-space:nowrap}
+.wb-send:hover{background:#fff}
+.wb-send:disabled{opacity:.5;cursor:not-allowed}
+
+/* 文生图 / 文生视频 */
+.wb-gen-row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-bottom:18px}
+.wb-gen-row textarea{flex:1;min-width:260px;min-height:64px;resize:vertical;background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:12px;padding:12px 14px;font:400 14px/1.5 "Noto Sans SC",sans-serif;outline:none}
+.wb-gen-row textarea:focus{border-color:var(--lime)}
+.wb-field{display:flex;flex-direction:column;gap:6px}
+.wb-field label{color:#aab2aa;font-size:12px}
+.wb-field select{background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:10px;padding:10px 12px;font-size:13px;outline:none;min-width:120px}
+.wb-gen{background:var(--lime);color:var(--ink);border:0;border-radius:12px;padding:0 26px;height:48px;font:800 14px/1 "Noto Sans SC",sans-serif;cursor:pointer;white-space:nowrap;align-self:flex-end}
+.wb-gen:hover{background:#fff}
+.wb-gen:disabled{opacity:.5;cursor:not-allowed}
+.wb-progress{color:#c7ff22;font-size:13px;margin:10px 0}
+.wb-progress .bar{height:6px;background:#ffffff1f;border-radius:4px;overflow:hidden;margin-top:8px}
+.wb-progress .bar i{display:block;height:100%;background:var(--lime);width:0;transition:width .5s}
+.wb-result{margin-top:14px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.wb-result img,.wb-result video{max-width:100%;border-radius:12px;border:1px solid #ffffff1f}
+.wb-result a{color:var(--lime);font-size:13px}
+
+/* 锁流遮罩：未激活时盖住免费舱 */
+.wb-lock{position:absolute;inset:0;background:#0a0e0acc;backdrop-filter:blur(4px);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;z-index:5}
+.wb-lock.hidden{display:none}
+.wb-lock .lk-ico{font-size:46px;margin-bottom:14px}
+.wb-lock h3{color:#fff;font-size:22px;font-weight:900;margin-bottom:10px}
+.wb-lock p{color:#cfd6cf;font-size:14px;line-height:1.7;max-width:440px;margin-bottom:18px}
+.wb-lock .lk-btn{background:var(--lime);color:var(--ink);border:0;border-radius:50px;padding:14px 30px;font:800 15px/1 "Noto Sans SC",sans-serif;cursor:pointer}
+.wb-lock .lk-btn:hover{background:#fff}
+
+/* 激活弹窗 */
+.activate-modal{position:fixed;inset:0;z-index:10001;display:none;align-items:center;justify-content:center;padding:24px}
+.activate-modal.open{display:flex}
+.activate-modal .am-backdrop{position:absolute;inset:0;background:#050605dd;backdrop-filter:blur(6px)}
+.activate-modal .am-card{position:relative;width:min(420px,92vw);background:var(--ink);border:1px solid #c7ff2240;border-radius:20px;padding:34px 26px 26px;text-align:center;box-shadow:0 30px 80px #000a;animation:modalIn .3s ease}
+.activate-modal .am-close{position:absolute;top:14px;right:16px;border:0;background:0 0;color:#ffffff66;font-size:26px;line-height:1;cursor:pointer}
+.activate-modal .am-close:hover{color:var(--lime)}
+.activate-modal .am-kicker{color:var(--lime);letter-spacing:.2em;font:700 11px Barlow Condensed}
+.activate-modal h3{color:#fff;margin:12px 0 8px;font-size:22px;font-weight:900;line-height:1.3}
+.activate-modal p.am-desc{color:#aab2aa;font-size:13px;line-height:1.7;margin-bottom:18px}
+.activate-modal .am-input{width:100%;background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:12px;padding:14px;font-size:14px;text-align:center;outline:none;letter-spacing:.04em}
+.activate-modal .am-input:focus{border-color:var(--lime)}
+.activate-modal .am-err{color:#ff9b9b;font-size:12.5px;margin:10px 0 0;min-height:16px}
+.activate-modal .am-go{width:100%;background:var(--lime);color:var(--ink);border:0;border-radius:12px;padding:14px;font:800 15px/1 "Noto Sans SC",sans-serif;cursor:pointer;margin-top:14px}
+.activate-modal .am-go:hover{background:#fff}
+.activate-modal .am-get{display:inline-block;margin-top:14px;color:var(--lime);font-size:13px;cursor:pointer;text-decoration:underline}
+.activate-modal .am-note{margin-top:12px;color:#8a928a;font-size:11px;line-height:1.6}
+
+@media(max-width:600px){.wb-title{font-size:24px}.wb-panel{padding:18px}.wb-chat{height:380px}.wb-tabs{gap:7px}.wb-tab{padding:10px 15px;font-size:13px}}
+
+/* 模型源选择行 */
+.wb-src-row{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+.wb-src-label{color:#aab2aa;font-size:12px}
+.wb-src-sel{background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:10px;padding:8px 12px;font-size:13px;outline:none}
+.wb-src-sel:focus{border-color:var(--lime)}
+.wb-src-cfg{background:#1c1e1b;border:1px solid #c7ff2240;color:var(--lime);border-radius:10px;padding:8px 14px;font:700 13px/1 "Noto Sans SC",sans-serif;cursor:pointer}
+.wb-src-cfg:hover{background:#c7ff2215}
+
+/* 锁层里的次级入口 */
+.wb-lock .lk-link{display:inline-block;margin-top:14px;background:0 0;border:0;color:var(--lime);font-size:12.5px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.wb-lock .lk-link:hover{color:#fff}
+
+/* 自带密钥配置弹窗 */
+.wb-cfg-modal{position:fixed;inset:0;z-index:10002;display:none;align-items:center;justify-content:center;padding:24px}
+.wb-cfg-modal.open{display:flex}
+.wb-cfg-modal .wcm-backdrop{position:absolute;inset:0;background:#050605dd;backdrop-filter:blur(6px)}
+.wb-cfg-modal .wcm-card{position:relative;width:min(440px,92vw);background:var(--ink);border:1px solid #c7ff2240;border-radius:20px;padding:32px 26px 24px;text-align:center;box-shadow:0 30px 80px #000a;animation:modalIn .3s ease}
+@keyframes modalIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.wb-cfg-modal .wcm-close{position:absolute;top:14px;right:16px;border:0;background:0 0;color:#ffffff66;font-size:26px;line-height:1;cursor:pointer}
+.wb-cfg-modal .wcm-close:hover{color:var(--lime)}
+.wb-cfg-modal .wcm-kicker{color:var(--lime);letter-spacing:.2em;font:700 11px Barlow Condensed}
+.wb-cfg-modal h3{color:#fff;margin:12px 0 8px;font-size:21px;font-weight:900;line-height:1.3}
+.wb-cfg-modal .wcm-desc{color:#aab2aa;font-size:13px;line-height:1.7;margin-bottom:18px;text-align:left}
+.wb-cfg-modal .wcm-field{display:flex;flex-direction:column;gap:6px;text-align:left;margin-bottom:14px}
+.wb-cfg-modal .wcm-field span{color:#aab2aa;font-size:12px}
+.wb-cfg-modal .wcm-input{width:100%;background:#1c1e1b;border:1px solid #ffffff2b;color:#fff;border-radius:12px;padding:13px;font-size:14px;outline:none}
+.wb-cfg-modal .wcm-input:focus{border-color:var(--lime)}
+.wb-cfg-modal .wcm-err{color:#ff9b9b;font-size:12.5px;margin:2px 0 10px;min-height:14px}
+.wb-cfg-modal .wcm-go{width:100%;background:var(--lime);color:var(--ink);border:0;border-radius:12px;padding:14px;font:800 15px/1 "Noto Sans SC",sans-serif;cursor:pointer}
+.wb-cfg-modal .wcm-go:hover{background:#fff}
+.wb-cfg-modal .wcm-note{margin-top:12px;color:#8a928a;font-size:11px;line-height:1.6}
 </style>
 </head>
 <body><main>
@@ -354,6 +462,80 @@
       <p>11 套 Prompt + 免费开源 AI（Agnes），今天就能产出第一个作品。加澄导领激活码，用熟了这个网页就是你的 AI 主基地。</p>
     </div>
   </div>
+</section><section class="workbench" id="workbench">
+  <div class="wb-head">
+    <div class="wb-kicker">开源模型免费舱 · 引流-锁流主基地</div>
+    <h2 class="wb-title">加澄导领激活码，<em>免费用 Agnes 开源 AI</em></h2>
+    <p class="wb-sub">文字大模型 · 文生图 · 图生视频 · 文生视频，全部免费。也支持<strong>自带密钥外接 DeepSeek / 通义千问 / 所有 OpenAI 兼容开源模型</strong>——用熟了，这个网页就是你的「AI 主基地」。这也是我们做这套系统的初心：不靠广告，靠真东西把你留下来。</p>
+  </div>
+  <div class="wb-tabs">
+    <button class="wb-tab active" data-wb="chat" onclick="switchWBTab('chat')">💬 文字对话</button>
+    <button class="wb-tab" data-wb="image" onclick="switchWBTab('image')">🎨 文生图</button>
+    <button class="wb-tab" data-wb="video" onclick="switchWBTab('video')">🎬 文生视频</button>
+  </div>
+
+  <div id="wb-panel-chat" class="wb-panel">
+    <div class="wb-src-row">
+      <span class="wb-src-label">模型源</span>
+      <select class="wb-src-sel" id="wbSrc" onchange="switchWBSrc()">
+        <option value="agnes">Agnes 会员（激活免费用）</option>
+        <option value="custom">自带密钥（DeepSeek/通义/开源）</option>
+      </select>
+      <button class="wb-src-cfg" id="wbSrcCfgBtn" style="display:none" onclick="openWBCfg()">⚙ 配置</button>
+    </div>
+    <div class="wb-chat">
+      <div class="wb-msgs" id="wbMsgs"><div class="wb-msg ai">你好，我是开源大模型。激活 Agnes 会员，或在右上角切到「自带密钥」填入你的开源模型密钥，就能免费聊天、写文案、想点子。试试问我："用 AI 月入过万的 3 个低门槛赛道是什么？"</div></div>
+      <div class="wb-input-row">
+        <textarea id="wbInput" placeholder="说点什么…（激活后可用）" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();wbChatSend()}"></textarea>
+        <select class="wb-model-sel" id="wbModel"><option value="agnes-1.5-flash">agnes-1.5-flash</option><option value="agnes-2.0-flash">agnes-2.0-flash</option></select>
+        <button class="wb-send" id="wbSend" onclick="wbChatSend()">发送</button>
+      </div>
+    </div>
+    <div class="wb-lock">
+  <div class="lk-ico">🔒</div>
+  <h3>免费舱已上锁</h3>
+  <p>加澄导企微，领取 Agnes 会员激活码，即可免费用文字大模型 / 文生图 / 文生视频全部功能。用熟了，这个网页就是你的 AI 主基地。</p>
+  <button class="lk-btn wechat-trigger">加澄导 · 领激活码</button>
+  <button class="lk-btn" style="background:#1c1e1b;color:#fff;margin-top:10px" onclick="openActivate()">已有激活码？点此输入 →</button>
+  <button class="lk-link" onclick="openWBCfgFromLock()">🤖 我有自己的开源模型密钥？免激活直接用 →</button>
+</div>
+  </div>
+
+  <div id="wb-panel-image" class="wb-panel" style="display:none">
+    <div class="wb-gen-row">
+      <textarea id="wbImgPrompt" placeholder="描述你想生成的画面，例如：赛博朋克城市夜景，霓虹灯，电影感"></textarea>
+      <div class="wb-field"><label>尺寸</label><select id="wbImgSize"><option value="1024x1024">1:1 · 1024</option><option value="1024x768">4:3 · 1024×768</option><option value="768x1024">3:4 · 768×1024</option><option value="1536x1024">3:2 · 1536×1024</option></select></div>
+      <button class="wb-gen" id="wbImgGen" onclick="wbImageGen()">🎨 生成图片</button>
+    </div>
+    <div class="wb-status" id="wbImgStatus">激活后即可免费生成</div>
+    <div class="wb-result" id="wbImgResult"></div>
+    <div class="wb-lock">
+  <div class="lk-ico">🔒</div>
+  <h3>免费舱已上锁</h3>
+  <p>加澄导企微，领取 Agnes 会员激活码，即可免费用文字大模型 / 文生图 / 文生视频全部功能。用熟了，这个网页就是你的 AI 主基地。</p>
+  <button class="lk-btn wechat-trigger">加澄导 · 领激活码</button>
+  <button class="lk-btn" style="background:#1c1e1b;color:#fff;margin-top:10px" onclick="openActivate()">已有激活码？点此输入 →</button>
+  <button class="lk-link" onclick="openWBCfgFromLock()">🤖 我有自己的开源模型密钥？免激活直接用 →</button>
+</div>
+  </div>
+
+  <div id="wb-panel-video" class="wb-panel" style="display:none">
+    <div class="wb-gen-row">
+      <textarea id="wbVidPrompt" placeholder="描述你想生成的视频，例如：一只猫在夕阳下的沙滩上散步，电影感"></textarea>
+      <div class="wb-field"><label>时长</label><select id="wbVidDuration"><option value="5">5 秒</option><option value="10">10 秒</option></select></div>
+      <button class="wb-gen" id="wbVidGen" onclick="wbVideoGen()">🎬 生成视频</button>
+    </div>
+    <div class="wb-progress" id="wbVidProgress">激活后即可免费生成视频（约 2-6 分钟）</div>
+    <div class="wb-result" id="wbVidResult"></div>
+    <div class="wb-lock">
+  <div class="lk-ico">🔒</div>
+  <h3>免费舱已上锁</h3>
+  <p>加澄导企微，领取 Agnes 会员激活码，即可免费用文字大模型 / 文生图 / 文生视频全部功能。用熟了，这个网页就是你的 AI 主基地。</p>
+  <button class="lk-btn wechat-trigger">加澄导 · 领激活码</button>
+  <button class="lk-btn" style="background:#1c1e1b;color:#fff;margin-top:10px" onclick="openActivate()">已有激活码？点此输入 →</button>
+  <button class="lk-link" onclick="openWBCfgFromLock()">🤖 我有自己的开源模型密钥？免激活直接用 →</button>
+</div>
+  </div>
 </section><section class="join-section" id="join">
   <div class="join-noise"></div>
   <div class="join-label">YOUR NEXT CHAPTER STARTS HERE</div>
@@ -394,6 +576,35 @@
     <p class="wechat-bonus">限时：前 100 位加微送《一人公司 AI 落地手册》+ 澄导 1v1 解读</p>
   </div>
 </div>
+<div class="activate-modal" id="activateModal" aria-hidden="true">
+  <div class="am-backdrop" data-amclose></div>
+  <div class="am-card">
+    <button class="am-close" data-amclose aria-label="关闭">&times;</button>
+    <div class="am-kicker">ACTIVATE · FREE AGNES</div>
+    <h3>输入激活码，解锁免费舱</h3>
+    <p class="am-desc">激活码来自加澄导企微后领取的 Agnes 会员码。输入即免费使用文字大模型 / 文生图 / 文生视频。</p>
+    <input class="am-input" id="amInput" placeholder="粘贴你的 Agnes 激活码" autocomplete="off"/>
+    <div class="am-err" id="amErr"></div>
+    <button class="am-go" id="amGo" onclick="doActivate()">激活并解锁</button>
+    <span class="am-get" onclick="openActivateThenWechat()">还没有？加澄导企微领激活码 →</span>
+    <p class="am-note">🔒 激活码仅保存在你本机浏览器，不会上传。本页所有 AI 调用直接连通 Agnes 开源接口。</p>
+  </div>
+</div>
+<div class="wb-cfg-modal" id="wbCfgModal" aria-hidden="true">
+  <div class="wcm-backdrop" data-wcmclose></div>
+  <div class="wcm-card">
+    <button class="wcm-close" data-wcmclose aria-label="关闭">&times;</button>
+    <div class="wcm-kicker">BRING YOUR OWN KEY</div>
+    <h3>用你自己的开源模型密钥</h3>
+    <p class="wcm-desc">不想加企微也行——填入任意 OpenAI 兼容的开源模型密钥（DeepSeek / 通义千问 / 硅基流动等），即可免激活直接对话。密钥仅存你本机，调用你自己的免费额度。</p>
+    <label class="wcm-field"><span>API Base</span><input class="wcm-input" id="wbCfgBase" placeholder="https://api.deepseek.com/v1"/></label>
+    <label class="wcm-field"><span>API Key</span><input class="wcm-input" id="wbCfgKey" placeholder="sk-xxxxxxxxxxxxxxxx"/></label>
+    <label class="wcm-field"><span>模型名</span><input class="wcm-input" id="wbCfgModel" placeholder="deepseek-chat"/></label>
+    <div class="wcm-err" id="wbCfgErr"></div>
+    <button class="wcm-go" id="wbCfgGo" onclick="saveWBCfg()">保存并使用</button>
+    <p class="wcm-note">🔒 信息仅保存在本机浏览器，不会上传服务器。</p>
+  </div>
+</div>
 <script>(function(){
   var menuBtn=document.querySelector('.menu-button');
   var mobileNav=document.getElementById('mobileNav');
@@ -413,7 +624,371 @@
     var fb=document.getElementById('wechatFallback');
     if(fb){fb.addEventListener('submit',function(e){e.preventDefault();var phone=fb.phone.value.trim();if(!phone){fb.phone.focus();return}fb.innerHTML='<p style="color:#c7ff22;font-weight:700;margin:0">已收到 '+phone+'，澄导会尽快加你 ✦</p>'})}
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeWechat()})}
+  // 暴露全局，供激活弹窗"加企微领码"调用
+  window.openWechatModal = openWechat;
+  // 激活弹窗关闭 + 回车提交
+  var am = document.getElementById('activateModal');
+  if(am){
+    am.querySelectorAll('[data-amclose]').forEach(function(el){el.addEventListener('click',closeActivate)});
+    var amInput = document.getElementById('amInput');
+    if(amInput){ amInput.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); doActivate(); } }); }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape' && am.classList.contains('open')) closeActivate(); });
+  }
+  // 自带密钥配置弹窗：关闭 + 回车保存
+  var wcm = document.getElementById('wbCfgModal');
+  if(wcm){
+    wcm.querySelectorAll('[data-wcmclose]').forEach(function(el){el.addEventListener('click',closeWBCfg)});
+    var wcmBase = document.getElementById('wbCfgBase');
+    if(wcmBase){ wcmBase.addEventListener('keydown',function(e){ if(e.key==='Enter'){ e.preventDefault(); saveWBCfg(); } }); }
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape' && wcm.classList.contains('open')) closeWBCfg(); });
+  }
 })();
+
+/* ===== Agnes 客户端内核 ===== */
+/* ============================================================
+ * agnes_client.js — 开源模型免费舱 客户端内核
+ * 实测契约（2026-07-18）：
+ *  - BASE: https://apihub.agnes-ai.com  （CORS: Access-Control-Allow-Origin: *，浏览器直连可行）
+ *  - 鉴权: Authorization: Bearer <激活码/KEY>
+ *  - 模型: agnes-1.5-flash / agnes-2.0-flash（文字）
+ *         agnes-image-2.1-flash / agnes-image-2.0-flash（文生图/图生图）
+ *         agnes-video-v2.0（文生视频/图生视频）
+ *  - 全部免费
+ * ============================================================ */
+var AGNES_BASE = 'https://apihub.agnes-ai.com';
+var AGNES_KEY_LS = 'opc_agnes_key';
+var AGNES_TEXT_MODELS = ['agnes-1.5-flash', 'agnes-2.0-flash'];
+var AGNES_IMG_MODEL = 'agnes-image-2.1-flash';
+var AGNES_VIDEO_MODEL = 'agnes-video-v2.0';
+
+// 模型源：agnes（默认·会员激活免费用）/ custom（自带密钥·OpenAI 兼容，可接 DeepSeek/通义/所有开源）
+var OPC_SRC_LS = 'opc_src';
+var OPC_CUSTOM_LS = 'opc_custom';
+
+function agnesGetKey() { try { return localStorage.getItem(AGNES_KEY_LS) || ''; } catch (e) { return ''; } }
+function agnesSetKey(k) { try { localStorage.setItem(AGNES_KEY_LS, k); } catch (e) {} }
+function agnesIsActive() { return agnesGetKey().length > 0; }
+
+function opcGetSrc() { try { return localStorage.getItem(OPC_SRC_LS) || 'agnes'; } catch (e) { return 'agnes'; } }
+function opcSetSrc(s) { try { localStorage.setItem(OPC_SRC_LS, s); } catch (e) {} }
+function opcGetCustom() { try { return JSON.parse(localStorage.getItem(OPC_CUSTOM_LS) || 'null'); } catch (e) { return null; } }
+function opcSetCustom(c) { try { localStorage.setItem(OPC_CUSTOM_LS, JSON.stringify(c)); } catch (e) {} }
+function opcCustomReady() { var c = opcGetCustom(); return !!(c && c.base && c.key); }
+// 解锁态：Agnes 会员激活 或 已配置自带密钥
+function opcUnlocked() { return agnesIsActive() || opcCustomReady(); }
+
+// 可选激活码映射：燕子姐后续可在此批量登记 code -> key（留空则默认“激活码即 Agnes key 本身”）
+// 例：'OPC-2026-AGNES-001': 'agnes-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+var OPC_CODE_MAP = {
+  // 'OPC-XXXX-XXXX': 'agnes-xxxxx-key',
+};
+function resolveKey(code) { return (OPC_CODE_MAP[code] || code); }
+
+// 校验激活码：用 /v1/models 探活（无需消耗额度）
+async function agnesValidate(code) {
+  var key = resolveKey(code);
+  try {
+    var r = await fetch(AGNES_BASE + '/v1/models', { headers: { 'Authorization': 'Bearer ' + key } });
+    return r.status === 200;
+  } catch (e) { return false; }
+}
+
+// 统一对话入口：按当前模型源路由（Agnes 会员 / 自带密钥 OpenAI 兼容）
+async function opcChat(messages, opts) {
+  opts = opts || {};
+  if (opcGetSrc() === 'custom') {
+    var c = opcGetCustom();
+    if (!c || !c.base || !c.key) throw new Error('请先在“自带密钥”里配置 API 地址和密钥');
+    var base = c.base.replace(/\/+$/, '');
+    var r = await fetch(base + '/chat/completions', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + c.key, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ model: c.model || 'deepseek-chat', messages: messages, stream: false }),
+      signal: opts.signal
+    });
+    if (!r.ok) { var t = await r.text(); throw new Error('调用失败(' + r.status + '): ' + t.slice(0, 120)); }
+    var j = await r.json();
+    return (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '';
+  }
+  // 默认走 Agnes
+  return agnesChat(messages, opts.model || AGNES_TEXT_MODELS[0], opts.signal);
+}
+
+// 文字大模型对话
+async function agnesChat(messages, model, signal) {
+  model = model || AGNES_TEXT_MODELS[0];
+  var r = await fetch(AGNES_BASE + '/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + agnesGetKey(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model: model, messages: messages, stream: false }),
+    signal: signal
+  });
+  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 对话失败(' + r.status + '): ' + t.slice(0, 120)); }
+  var j = await r.json();
+  return (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '';
+}
+
+// 文生图 / 图生图
+async function agnesImage(prompt, opts) {
+  opts = opts || {};
+  var body = { model: AGNES_IMG_MODEL, prompt: prompt, size: opts.size || '1024x1024' };
+  if (opts.image) body.image = opts.image; // 图生图：图片 URL
+  var r = await fetch(AGNES_BASE + '/v1/images/generations', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + agnesGetKey(), 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 生图失败(' + r.status + '): ' + t.slice(0, 120)); }
+  var j = await r.json();
+  return (j.data && j.data[0] && j.data[0].url) || '';
+}
+
+// 视频：创建任务（返回 video_id）
+async function agnesVideoCreate(prompt, opts) {
+  opts = opts || {};
+  var body = {
+    model: AGNES_VIDEO_MODEL,
+    prompt: prompt,
+    duration: opts.duration || 5,
+    width: opts.width || 1152,
+    height: opts.height || 768,
+    frame_rate: opts.frame_rate || 24
+  };
+  if (opts.image) body.image = opts.image;
+  var r = await fetch(AGNES_BASE + '/v1/videos', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer ' + agnesGetKey(), 'Content-Type': 'application/json' },
+    body: JSON.stringify(body)
+  });
+  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 视频创建失败(' + r.status + '): ' + t.slice(0, 120)); }
+  var j = await r.json();
+  return j.video_id || j.id || '';
+}
+
+// 视频：轮询结果（completed 时返回 url）
+async function agnesVideoPoll(videoId) {
+  var r = await fetch(AGNES_BASE + '/agnesapi?video_id=' + encodeURIComponent(videoId), {
+    headers: { 'Authorization': 'Bearer ' + agnesGetKey() }
+  });
+  if (!r.ok) { var t = await r.text(); throw new Error('Agnes 视频查询失败(' + r.status + '): ' + t.slice(0, 120)); }
+  var j = await r.json();
+  return { status: j.status, url: j.url || '', progress: j.internal_progress || 0 };
+}
+
+
+/* ===== 开源模型免费舱 ===== */
+/* ============================================================
+ * ai_workbench.js — 开源模型免费舱 UI 逻辑（文字/文生图/文生视频）
+ * 依赖 agnes_client.js（同作用域内全局函数）
+ * ============================================================ */
+
+var _wbMessages = [];
+
+function switchWBTab(t) {
+  ['chat', 'image', 'video'].forEach(function (k) {
+    var p = document.getElementById('wb-panel-' + k);
+    var b = document.querySelector('.wb-tab[data-wb="' + k + '"]');
+    if (p) p.style.display = (k === t) ? 'block' : 'none';
+    if (b) b.classList.toggle('active', k === t);
+  });
+}
+
+// 根据解锁状态刷新锁层（Agnes 会员激活 或 自带密钥就绪）
+function refreshWorkbenchLock() {
+  var lock = document.getElementById('wbLock');
+  if (lock) lock.classList.toggle('hidden', opcUnlocked());
+  syncSrcUI();
+  // 同步 4 工具里的 AI 按钮态（若 ai_center 暴露了刷新钩子）
+  if (typeof onAgnesActivated === 'function') { try { onAgnesActivated(); } catch (e) {} }
+}
+
+// ---------- 文字对话 ----------
+async function wbChatSend() {
+  var input = document.getElementById('wbInput');
+  var send = document.getElementById('wbSend');
+  var msgs = document.getElementById('wbMsgs');
+  var text = input.value.trim();
+  if (!text) return;
+  // 源校验：自带密钥就绪可直接用；否则需 Agnes 会员激活
+  if (opcGetSrc() === 'custom') {
+    if (!opcCustomReady()) { openWBCfg(); return; }
+  } else if (!agnesIsActive()) { openActivate(); return; }
+  _wbMessages.push({ role: 'user', content: text });
+  msgs.appendChild(mkMsg('me', text));
+  input.value = '';
+  var think = mkMsg('ai thinking', 'AI 正在思考…');
+  msgs.appendChild(think);
+  msgs.scrollTop = msgs.scrollHeight;
+  send.disabled = true;
+  try {
+    var reply = await opcChat(_wbMessages.slice(), { model: document.getElementById('wbModel').value });
+    think.remove();
+    _wbMessages.push({ role: 'assistant', content: reply });
+    msgs.appendChild(mkMsg('ai', reply));
+  } catch (e) {
+    think.remove();
+    msgs.appendChild(mkMsg('ai', '⚠️ ' + e.message));
+  }
+  msgs.scrollTop = msgs.scrollHeight;
+  send.disabled = false;
+}
+
+// ---------- 模型源切换 + 自带密钥配置 ----------
+function syncSrcUI() {
+  var sel = document.getElementById('wbSrc');
+  if (!sel) return;
+  var src = opcGetSrc();
+  sel.value = src;
+  var cfgBtn = document.getElementById('wbSrcCfgBtn');
+  if (cfgBtn) cfgBtn.style.display = (src === 'custom') ? 'inline-block' : 'none';
+  // 文生图/视频仅 Agnes 支持：非 Agnes 源时给出提示
+  var imgGen = document.getElementById('wbImgGen');
+  var vidGen = document.getElementById('wbVidGen');
+  if (imgGen) imgGen.disabled = (src !== 'agnes') ? true : imgGen.disabled;
+  if (vidGen) vidGen.disabled = (src !== 'agnes') ? true : vidGen.disabled;
+}
+function switchWBSrc() {
+  var sel = document.getElementById('wbSrc');
+  if (!sel) return;
+  opcSetSrc(sel.value);
+  syncSrcUI();
+  refreshWorkbenchLock();
+}
+function openWBCfg() {
+  var m = document.getElementById('wbCfgModal');
+  if (!m) return;
+  var c = opcGetCustom() || {};
+  var b = document.getElementById('wbCfgBase'); if (b) b.value = c.base || '';
+  var k = document.getElementById('wbCfgKey'); if (k) k.value = c.key || '';
+  var mo = document.getElementById('wbCfgModel'); if (mo) mo.value = c.model || '';
+  m.classList.add('open');
+}
+function closeWBCfg() {
+  var m = document.getElementById('wbCfgModal');
+  if (m) m.classList.remove('open');
+}
+function saveWBCfg() {
+  var b = document.getElementById('wbCfgBase');
+  var k = document.getElementById('wbCfgKey');
+  var mo = document.getElementById('wbCfgModel');
+  var err = document.getElementById('wbCfgErr');
+  var base = (b.value || '').trim();
+  var key = (k.value || '').trim();
+  var model = (mo.value || '').trim() || 'deepseek-chat';
+  if (!base || !key) { if (err) err.textContent = 'API 地址和密钥都要填'; return; }
+  opcSetCustom({ base: base, key: key, model: model });
+  closeWBCfg();
+  refreshWorkbenchLock();
+}
+// 锁层里的"我有自己的密钥"入口
+function openWBCfgFromLock() { opcSetSrc('custom'); syncSrcUI(); openWBCfg(); }
+function mkMsg(cls, text) {
+  var d = document.createElement('div');
+  d.className = 'wb-msg ' + cls;
+  d.textContent = text;
+  return d;
+}
+
+// ---------- 文生图 ----------
+async function wbImageGen() {
+  var prompt = document.getElementById('wbImgPrompt').value.trim();
+  var size = document.getElementById('wbImgSize').value;
+  var btn = document.getElementById('wbImgGen');
+  var res = document.getElementById('wbImgResult');
+  var status = document.getElementById('wbImgStatus');
+  if (!prompt || !agnesIsActive()) return;
+  btn.disabled = true; status.className = 'wb-status'; status.textContent = '正在生成图片…'; res.innerHTML = '';
+  try {
+    var url = await agnesImage(prompt, { size: size });
+    if (url) {
+      res.innerHTML = '<img src="' + url + '" alt="生成结果"/>';
+      status.className = 'wb-status ok'; status.textContent = '✅ 生成完成，右键可保存';
+    } else { status.className = 'wb-status err'; status.textContent = '未返回图片，请重试'; }
+  } catch (e) { status.className = 'wb-status err'; status.textContent = e.message; }
+  btn.disabled = false;
+}
+
+// ---------- 文生视频 / 图生视频 ----------
+async function wbVideoGen() {
+  var prompt = document.getElementById('wbVidPrompt').value.trim();
+  var dur = parseInt(document.getElementById('wbVidDuration').value, 10) || 5;
+  var btn = document.getElementById('wbVidGen');
+  var res = document.getElementById('wbVidResult');
+  var prog = document.getElementById('wbVidProgress');
+  if (!prompt || !agnesIsActive()) return;
+  btn.disabled = true; res.innerHTML = ''; prog.innerHTML = '创建任务中…';
+  try {
+    var vid = await agnesVideoCreate(prompt, { duration: dur, width: 1152, height: 768 });
+    if (!vid) { prog.className = 'wb-status err'; prog.textContent = '创建失败，请重试'; btn.disabled = false; return; }
+    // 轮询
+    var done = false, tries = 0;
+    while (!done && tries < 48) {
+      tries++;
+      await new Promise(r => setTimeout(r, 5000));
+      var s = await agnesVideoPoll(vid);
+      var pct = Math.max(5, Math.min(99, Math.round((s.progress || 0))));
+      prog.innerHTML = '<div>生成中… ' + pct + '%（约 ' + tries * 5 + 's）</div><div class="bar"><i style="width:' + pct + '%"></i></div>';
+      if (s.status === 'completed' && s.url) {
+        done = true;
+        res.innerHTML = '<video src="' + s.url + '" controls autoplay loop></video><a href="' + s.url + '" target="_blank" rel="noopener">下载视频 ↗</a>';
+        prog.className = 'wb-status ok'; prog.textContent = '✅ 视频生成完成';
+      } else if (s.status === 'failed' || s.status === 'error') {
+        done = true; prog.className = 'wb-status err'; prog.textContent = '生成失败，请重试';
+      }
+    }
+    if (!done) { prog.className = 'wb-status'; prog.textContent = '生成时间较长，可稍后刷新本页查看结果'; }
+  } catch (e) { prog.className = 'wb-status err'; prog.textContent = e.message; }
+  btn.disabled = false;
+}
+
+// ---------- 激活弹窗 ----------
+function openActivate() {
+  var m = document.getElementById('activateModal');
+  if (m) { m.classList.add('open'); var i = document.getElementById('amInput'); if (i) i.focus(); }
+}
+function closeActivate() {
+  var m = document.getElementById('activateModal');
+  if (m) m.classList.remove('open');
+}
+async function doActivate() {
+  var i = document.getElementById('amInput');
+  var err = document.getElementById('amErr');
+  var go = document.getElementById('amGo');
+  var code = (i.value || '').trim();
+  if (!code) { err.textContent = '请输入激活码'; return; }
+  go.disabled = true; err.textContent = '校验中…';
+  var ok = await agnesValidate(code);
+  if (ok) {
+    agnesSetKey(resolveKey(code));
+    opcSetSrc('agnes');
+    closeActivate();
+    refreshWorkbenchLock();
+  } else {
+    err.textContent = '激活码无效，请确认后重试（加澄导企微领取）';
+  }
+  go.disabled = false;
+}
+function openActivateThenWechat() {
+  closeActivate();
+  if (typeof openWechatModal === 'function') openWechatModal();
+}
+
+// 内容工坊：直接用当前模型源生成文案（Agnes 或自带密钥）
+async function agnesGenWorkshop(resultId) {
+  if (opcGetSrc() === 'custom') { if (!opcCustomReady()) { openWBCfg(); return; } }
+  else if (!agnesIsActive()) { openActivate(); return; }
+  var final = window._wbWorkshopFinal && window._wbWorkshopFinal[resultId];
+  var out = document.getElementById(resultId + '-out');
+  if (!final || !out) return;
+  out.innerHTML = '<div class="ai-report-body">⏳ AI 正在生成你的专属内容…</div>';
+  try {
+    var reply = await opcChat([{ role: 'user', content: final }], { model: 'agnes-1.5-flash' });
+    out.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 生成内容</span><button class="copy-btn" onclick="copyText(\'' + resultId + '-out-content\')">📋 复制</button></div><div class="ai-report-body" id="' + resultId + '-out-content">' + reply.replace(/\n/g, '<br>') + '</div></div>';
+  } catch (e) {
+    out.innerHTML = '<div class="ai-report-body" style="color:#ff9b9b">⚠️ ' + e.message + '</div>';
+  }
+}
+
 
 /* ===== AI 赋能中心逻辑 ===== */
 /* =========================================================
@@ -742,10 +1317,22 @@ function calcMoney(){
   setTimeout(function(){ result.scrollIntoView({behavior:'smooth'}); }, 100);
   window._lastCalcParams = { time:time, budget:budget, skill:skill, pref:pref, top:top };
 }
-function getAIMoneyAdvice(){
+async function getAIMoneyAdvice(){
   var container = document.getElementById('ai-money-advice'); if(!container||!window._lastCalcParams) return;
   var p = window._lastCalcParams;
-  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">💡 <b>定制起步建议（离线版）</b>：基于你的条件，建议优先尝试系统推荐的 Top1 路径。第一周：花2天学习基础工具，花3天完成第一个最小可行产出，花2天在小红书/抖音发布测试市场反应。先跑通最小闭环，再考虑放大。\n（注：部署 AI 后端并配置 Key 后，此处将显示 AI 实时生成的专属方案。）</div></div>';
+  if(!agnesIsActive()){
+    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">💡 <b>定制起步建议（离线预览版）</b>：基于你的条件，建议优先尝试系统推荐的 Top1 路径。第一周：花2天学习基础工具，花3天完成第一个最小可行产出，花2天在小红书/抖音发布测试市场反应。先跑通最小闭环，再考虑放大。\n（激活 Agnes 会员码后，此处将由 AI 实时生成你的专属方案。）</div></div>';
+    return;
+  }
+  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">⏳ Agnes 正在为你定制专属起步方案…</div></div>';
+  var topStr = (p.top||[]).map(function(m){return m.title+'（'+m.income+'，启动'+m.invest+'，回本'+m.roi+'）';}).join('；');
+  var prompt = '你是OPC-AI商业军师。用户条件：AI技能 '+p.skill+'/4，每周可投入 '+p.time+' 小时，启动资金 '+p.budget+' 元，偏好 '+p.pref+'。\n系统已匹配出最优先的3个变现路径：'+topStr+'。\n请给出：①为什么这3个最适合他；②未来7天第一天的具体动作清单（每天做什么）；③第一个最小闭环怎么跑通。语言简洁，给可执行步骤，不要空话。';
+  try{
+    var reply = await agnesChat([{role:'user',content:prompt}], 'agnes-1.5-flash');
+    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 军师专属方案（Agnes 实时生成）</span><button class="copy-btn" onclick="copyText(\'ai-money-advice-content\')">📋 复制</button></div><div class="ai-report-body" id="ai-money-advice-content">'+reply.replace(/\n/g,'<br>')+'</div></div>';
+  }catch(e){
+    container.innerHTML = '<div class="ai-report-card" style="border-color:#ff6b6b"><div class="ai-report-body" style="color:#ff9b9b">⚠️ '+e.message+'</div></div>';
+  }
 }
 
 /* ---------- 内容工坊 ---------- */
@@ -827,11 +1414,15 @@ function aiGenerate(promptIdx, resultId){
   }
   var final = prompt.prompt;
   Object.keys(userInputs).forEach(function(k){ final = final.replace(new RegExp('\\{'+k+'\\}','g'), userInputs[k]); });
+  window._wbWorkshopFinal = window._wbWorkshopFinal || {};
+  window._wbWorkshopFinal[resultId] = final;
   container.style.display='block';
   container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 已为你组装专属Prompt</span>'+
     '<button class="copy-btn" onclick="copyText(\''+resultId+'-content\')">📋 复制</button></div>'+
     '<div class="ai-report-body" id="'+resultId+'-content">'+final.replace(/\n/g,'<br>')+'</div>'+
-    '<div class="ai-report-foot">把以上内容粘贴给任意 AI（DeepSeek/ChatGPT/豆包），即可得到你的专属内容。配置后端 Key 后此处可直接出稿。</div>'+
+    '<button class="btn btn-primary btn-block" style="margin-top:14px" onclick="agnesGenWorkshop(\''+resultId+'\')">🤖 用 Agnes 直接生成文案（免费用）</button>'+
+    '<div id="'+resultId+'-out" style="margin-top:12px"></div>'+
+    '<div class="ai-report-foot">把以上内容粘贴给任意 AI（DeepSeek/ChatGPT/豆包），即可得到你的专属内容。激活 Agnes 后也可一键由本页直接出稿。</div>'+
     lockFlowHTML()+
   '</div>';
 }
@@ -955,6 +1546,8 @@ function switchAITab(tab){
   renderAtlas(); renderMoneyModels(); renderWorkshop(); initAssessment();
   switchAITab('assess');
 })();
-</script>
+
+
+switchWBTab('chat'); refreshWorkbenchLock();</script>
 </body>
 </html>
