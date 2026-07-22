@@ -486,7 +486,7 @@ html,body{background:#0a0b0b;color:#e8ece8}
       <div class="vk-card">
         <div class="vk-ico">🚀</div>
         <h3>立刻开干</h3>
-        <p>11 套 Prompt + 免费开源 AI（Agnes），今天就能产出第一个作品。加澄导领激活码，用熟了这个网页就是你的 AI 主基地。</p>
+        <p>11 套 Prompt + 免费顶级 AI，今天就能产出第一个作品。加澄导领激活码，用熟了这个网页就是你的 AI 主基地。</p>
       </div>
     </div>
   </div>
@@ -545,10 +545,10 @@ html,body{background:#0a0b0b;color:#e8ece8}
   <div class="join-noise"></div>
   <div class="join-label">DEEP CONNECTION · 合伙人共创</div>
   <h2>未来不是等待出来的，<br/><span>是创造出来的。</span></h2>
-  <p class="join-emotion">OPC-AI 是平台，也是一群同频行动者的<strong>共创网络</strong>。<br/>加澄导企微，进合伙人内测圈，领 Agnes 开源 AI 激活码——把「可能」变成你的「结果」。</p>
+  <p class="join-emotion">OPC-AI 是平台，也是一群同频行动者的<strong>共创网络</strong>。<br/>加澄导企微，进合伙人内测圈，领 AI 激活码——把「可能」变成你的「结果」。</p>
   <div class="join-value">
     <div class="value-chip"><span class="vc-ico">🤝</span><b>合伙人内测圈</b><small>和同频者一起破圈</small></div>
-    <div class="value-chip"><span class="vc-ico">🚀</span><b>Agnes 激活码</b><small>免费用开源 AI</small></div>
+    <div class="value-chip"><span class="vc-ico">🚀</span><b>AI 激活码</b><small>免费用顶级 AI</small></div>
     <div class="value-chip"><span class="vc-ico">🗺️</span><b>专属成长地图</b><small>1 页纸 · 3 动作</small></div>
     <div class="value-chip"><span class="vc-ico">📘</span><b>一人公司手册</b><small>前 100 位加微赠</small></div>
   </div>
@@ -584,14 +584,14 @@ html,body{background:#0a0b0b;color:#e8ece8}
   <div class="am-backdrop" data-amclose></div>
   <div class="am-card">
     <button class="am-close" data-amclose aria-label="关闭">&times;</button>
-    <div class="am-kicker">ACTIVATE · FREE AGNES</div>
+    <div class="am-kicker">ACTIVATE · FREE AI</div>
     <h3>输入激活码，解锁免费舱</h3>
-    <p class="am-desc">激活码来自加澄导企微后领取的 Agnes 会员码。输入即免费使用文字大模型 / 文生图 / 文生视频。</p>
+    <p class="am-desc">激活码来自加澄导企微后领取的 AI 会员码。输入即免费使用文字大模型 / 文生图 / 文生视频。</p>
     <input class="am-input" id="amInput" placeholder="粘贴你的 Agnes 激活码" autocomplete="off"/>
     <div class="am-err" id="amErr"></div>
     <button class="am-go" id="amGo" onclick="doActivate()">激活并解锁</button>
     <span class="am-get" onclick="openActivateThenWechat()">还没有？加澄导企微领激活码 →</span>
-    <p class="am-note">🔒 激活码仅保存在你本机浏览器，不会上传。本页所有 AI 调用直接连通 Agnes 开源接口。</p>
+    <p class="am-note">🔒 激活码仅保存在你本机浏览器，不会上传。本页所有 AI 调用直连云端大模型接口。</p>
   </div>
 </div><div class="wb-cfg-modal" id="wbCfgModal" aria-hidden="true">
   <div class="wcm-backdrop" data-wcmclose></div>
@@ -1274,7 +1274,7 @@ var ATLAS_QUIZ_QUESTIONS = [
    ========================================================= */
 function lockFlowHTML(){
   return '<div class="lock-flow">'+
-    '<div class="lf-title">🎁 加澄导微信，领 Agnes 开源 AI 会员激活码</div>'+
+    '<div class="lf-title">🎁 加澄导微信，领 AI 会员激活码</div>'+
     '<p class="lf-desc">文生图 · 文生视频 · 对话大模型，全部免费体验。用熟了这个网页，就是你 AI 起步的「主基地」。</p>'+
     '<button class="btn btn-primary btn-block wechat-trigger">领激活码 · 免费用 AI 开干 →</button>'+
   '</div>';
@@ -1449,15 +1449,15 @@ async function getAIMoneyAdvice(){
   var container = document.getElementById('ai-money-advice'); if(!container||!window._lastCalcParams) return;
   var p = window._lastCalcParams;
   if(!agnesIsActive()){
-    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">💡 <b>定制起步建议（离线预览版）</b>：基于你的条件，建议优先尝试系统推荐的 Top1 路径。第一周：花2天学习基础工具，花3天完成第一个最小可行产出，花2天在小红书/抖音发布测试市场反应。先跑通最小闭环，再考虑放大。\n（激活 Agnes 会员码后，此处将由 AI 实时生成你的专属方案。）</div></div>';
+    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">💡 <b>定制起步建议（离线预览版）</b>：基于你的条件，建议优先尝试系统推荐的 Top1 路径。第一周：花2天学习基础工具，花3天完成第一个最小可行产出，花2天在小红书/抖音发布测试市场反应。先跑通最小闭环，再考虑放大。\n（激活 AI 会员码后，此处将由 AI 实时生成你的专属方案。）</div></div>';
     return;
   }
-  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">⏳ Agnes 正在为你定制专属起步方案…</div></div>';
+  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">⏳ AI 正在为你定制专属起步方案…</div></div>';
   var topStr = (p.top||[]).map(function(m){return m.title+'（'+m.income+'，启动'+m.invest+'，回本'+m.roi+'）';}).join('；');
   var prompt = '你是OPC-AI商业军师。用户条件：AI技能 '+p.skill+'/4，每周可投入 '+p.time+' 小时，启动资金 '+p.budget+' 元，偏好 '+p.pref+'。\n系统已匹配出最优先的3个变现路径：'+topStr+'。\n请给出：①为什么这3个最适合他；②未来7天第一天的具体动作清单（每天做什么）；③第一个最小闭环怎么跑通。语言简洁，给可执行步骤，不要空话。';
   try{
     var reply = await agnesChat([{role:'user',content:prompt}], 'agnes-1.5-flash');
-    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 军师专属方案（Agnes 实时生成）</span><button class="copy-btn" onclick="copyText(\'ai-money-advice-content\')">📋 复制</button></div><div class="ai-report-body" id="ai-money-advice-content">'+reply.replace(/\n/g,'<br>')+'</div></div>';
+    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 军师专属方案（AI 实时生成）</span><button class="copy-btn" onclick="copyText(\'ai-money-advice-content\')">📋 复制</button></div><div class="ai-report-body" id="ai-money-advice-content">'+reply.replace(/\n/g,'<br>')+'</div></div>';
     if(typeof opcTrack==='function') opcTrack('tool_money');
   }catch(e){
     container.innerHTML = '<div class="ai-report-card" style="border-color:#ff6b6b"><div class="ai-report-body" style="color:#ff9b9b">⚠️ '+e.message+'</div></div>';
@@ -1549,9 +1549,9 @@ function aiGenerate(promptIdx, resultId){
   container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 已为你组装专属Prompt</span>'+
     '<button class="copy-btn" onclick="copyText(\''+resultId+'-content\')">📋 复制</button></div>'+
     '<div class="ai-report-body" id="'+resultId+'-content">'+final.replace(/\n/g,'<br>')+'</div>'+
-    '<button class="btn btn-primary btn-block" style="margin-top:14px" onclick="agnesGenWorkshop(\''+resultId+'\')">🤖 用 Agnes 直接生成文案（免费用）</button>'+
+    '<button class="btn btn-primary btn-block" style="margin-top:14px" onclick="agnesGenWorkshop(\''+resultId+'\')">🤖 AI 直接生成文案（免费用）</button>'+
     '<div id="'+resultId+'-out" style="margin-top:12px"></div>'+
-    '<div class="ai-report-foot">把以上内容粘贴给任意 AI（DeepSeek/ChatGPT/豆包），即可得到你的专属内容。激活 Agnes 后也可一键由本页直接出稿。</div>'+
+    '<div class="ai-report-foot">把以上内容粘贴给任意 AI（DeepSeek/ChatGPT/豆包），即可得到你的专属内容。激活 AI 会员后也可一键由本页直接出稿。</div>'+
     lockFlowHTML()+
   '</div>';
 }
