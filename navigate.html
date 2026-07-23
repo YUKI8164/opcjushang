@@ -1729,7 +1729,7 @@ function _ensureAdvisorModal(){
     '<div class="ai-advisor-card">'+
       '<button class="ai-advisor-close" data-close aria-label="关闭">&times;</button>'+
       '<div class="ai-advisor-head">'+
-        '<div class="ai-advisor-kicker">🎯 AI 人事总监 · 1v1 咨询</div>'+
+        '<div class="ai-advisor-kicker">🎯 AI 职业规划师 · 1v1 陪聊</div>'+
         '<h3 class="ai-advisor-title" id="aiAdvisorTitle">AI 顾问</h3>'+
         '<p class="ai-advisor-sub" id="aiAdvisorSub">向 AI 顾问提问这个方向</p>'+
       '</div>'+
@@ -1756,7 +1756,7 @@ function _openAdvisorModal(title, sub, sys){
   m.classList.add('open');
   m.setAttribute('aria-hidden','false');
   _advisorSession = { sys: sys, history: [] };
-  _appendAdvisorBubble('ai', '你好，我是 AI 人事总监「小澄」。关于「'+title+'」有任何问题——技能怎么补、路径怎么走、薪资怎么谈、转型要注意什么——直接问我，3 秒内回。');
+  _appendAdvisorBubble('ai', '你好，我是 AI 职业规划师「小澄」。关于「'+title+'」有任何问题——技能怎么补、路径怎么走、薪资怎么谈、转型要注意什么——直接问我，3 秒内回。');
   if (typeof opcTrack==='function') opcTrack('advisor_open', { title: title });
 }
 function _closeAdvisorModal(){
@@ -1812,7 +1812,7 @@ async function _advisorSend(){
 function openCareerAdvisor(idx){
   var c = (typeof CAREERS!=='undefined') ? CAREERS[idx] : null;
   if (!c) return;
-  var sys = '你是「OPC-AI」赛道的资深 AI 人事总监，名叫「小澄」。你正在 1v1 接待一位对「'+c.title+'」感兴趣的人。'+
+  var sys = '你是「OPC-AI」赛道的资深 AI 职业规划师，名叫「小澄」。你正在 1v1 接待一位对「'+c.title+'」感兴趣的人。'+
     '岗位简介：'+c.desc+'。'+
     '核心技能：'+c.skills.join('、')+'。'+
     'AI 替代风险：'+c.aiRisk+'。转型难度：'+c.difficulty+' / 5 星。'+
@@ -1823,7 +1823,7 @@ function openCareerAdvisor(idx){
 function openMoneyAdvisor(idx){
   var m = (typeof MONEY_MODELS!=='undefined') ? MONEY_MODELS[idx] : null;
   if (!m) return;
-  var sys = '你是「OPC-AI」赛道的资深 AI 商业教练，名叫「小澄」。你正在 1v1 接待一位想了解「'+m.title+'」变现模式的人。'+
+  var sys = '你是「OPC-AI」赛道的资深 AI 职业规划师，名叫「小澄」。你正在 1v1 接待一位想了解「'+m.title+'」变现模式的人。'+
     '模式简介：'+m.desc+'。'+
     '启动资金：'+m.invest+'，月收入预估：'+m.income+'，回本周期：'+m.roi+'，上手时间：'+m.time+'。'+
     '核心技能：'+m.skills.join('、')+'。'+
