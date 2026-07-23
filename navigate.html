@@ -351,6 +351,37 @@ html,body{background:#0a0b0b;color:#e8ece8}
   .money-stats{grid-template-columns:1fr 1fr}
 }
 
+/* ===== AI 顾问弹窗（职业图鉴/赚钱引擎通用）——替代过频的加微引导 ===== */
+@keyframes advisorIn{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+.ai-advisor-modal{position:fixed;inset:0;z-index:10001;display:none;align-items:center;justify-content:center;padding:24px}
+.ai-advisor-modal.open{display:flex}
+.ai-advisor-backdrop{position:absolute;inset:0;background:#050605cc;backdrop-filter:blur(8px)}
+.ai-advisor-card{position:relative;width:min(580px,94vw);max-height:88vh;background:var(--ink);border:1px solid #c7ff2240;border-radius:20px;padding:24px 22px 18px;display:flex;flex-direction:column;box-shadow:0 30px 80px #000a;animation:advisorIn .3s ease}
+.ai-advisor-close{position:absolute;top:12px;right:14px;border:0;background:0 0;color:#ffffff66;font-size:26px;line-height:1;cursor:pointer;padding:0;width:32px;height:32px}
+.ai-advisor-close:hover{color:var(--lime)}
+.ai-advisor-head{margin-bottom:14px;padding-right:34px;border-bottom:1px solid #ffffff14;padding-bottom:12px}
+.ai-advisor-kicker{color:var(--lime);letter-spacing:.18em;font:700 11px/1.2 Barlow Condensed;text-transform:uppercase;margin-bottom:6px}
+.ai-advisor-title{color:#fff;font-size:20px;font-weight:900;margin:0 0 4px;letter-spacing:-.01em;line-height:1.3}
+.ai-advisor-sub{color:#aab2aa;font-size:13px;margin:0;line-height:1.5}
+.ai-advisor-bubble{flex:1;overflow-y:auto;background:#0c0e0c;border:1px solid #ffffff14;border-radius:12px;padding:14px;margin:0 0 14px;display:flex;flex-direction:column;gap:10px;min-height:180px;max-height:46vh}
+.ai-advisor-bubble::-webkit-scrollbar{width:6px}
+.ai-advisor-bubble::-webkit-scrollbar-thumb{background:#ffffff26;border-radius:3px}
+.ai-advisor-msg{font-size:14px;line-height:1.65;padding:10px 14px;border-radius:14px;max-width:88%;word-wrap:break-word;white-space:pre-wrap}
+.ai-advisor-msg--ai{background:#1a1d1a;border:1px solid #c7ff2226;color:#e8ffe8;align-self:flex-start;border-top-left-radius:4px}
+.ai-advisor-msg--user{background:var(--lime);color:#0a0b0b;align-self:flex-end;border-top-right-radius:4px;font-weight:500}
+.ai-advisor-input{display:flex;gap:8px;align-items:flex-end}
+.ai-advisor-input textarea{flex:1;background:#0c0e0c;border:1px solid #ffffff26;border-radius:10px;padding:10px 12px;color:#fff;font:14px/1.5 "Noto Sans SC",sans-serif;resize:none;outline:none;transition:.18s;box-sizing:border-box}
+.ai-advisor-input textarea:focus{border-color:var(--lime)}
+.ai-advisor-input .btn{white-space:nowrap;padding:10px 18px}
+.ai-advisor-input .btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:none}
+.ai-advisor-foot{text-align:center;color:#ffffff52;font-size:11px;margin-top:10px;letter-spacing:.05em}
+@media(max-width:560px){
+  .ai-advisor-card{padding:20px 16px 14px}
+  .ai-advisor-title{font-size:18px}
+  .ai-advisor-input{flex-direction:column;align-items:stretch}
+  .ai-advisor-input .btn{width:100%;padding:12px}
+}
+
 /* === 开源模型免费舱（引流-锁流主基地） === */
 .workbench{max-width:1080px;margin:0 auto;padding:72px 24px 12px}
 .wb-kicker{color:var(--lime);letter-spacing:.18em;font:700 12px Barlow Condensed;text-align:center}
@@ -486,7 +517,7 @@ html,body{background:#0a0b0b;color:#e8ece8}
       <div class="vk-card">
         <div class="vk-ico">🚀</div>
         <h3>立刻开干</h3>
-        <p>11 套 Prompt + 免费顶级 AI，今天就能产出第一个作品。加澄导领激活码，用熟了这个网页就是你的 AI 主基地。</p>
+        <p>11 套 Prompt + 免费开源 AI（Agnes），今天就能产出第一个作品。加澄导领激活码，用熟了这个网页就是你的 AI 主基地。</p>
       </div>
     </div>
   </div>
@@ -548,7 +579,7 @@ html,body{background:#0a0b0b;color:#e8ece8}
   <p class="join-emotion">OPC-AI 是平台，也是一群同频行动者的<strong>共创网络</strong>。<br/>加澄导企微，进合伙人内测圈，领 AI 激活码——把「可能」变成你的「结果」。</p>
   <div class="join-value">
     <div class="value-chip"><span class="vc-ico">🤝</span><b>合伙人内测圈</b><small>和同频者一起破圈</small></div>
-    <div class="value-chip"><span class="vc-ico">🚀</span><b>AI 激活码</b><small>免费用顶级 AI</small></div>
+    <div class="value-chip"><span class="vc-ico">🚀</span><b>Agnes 激活码</b><small>免费用开源 AI</small></div>
     <div class="value-chip"><span class="vc-ico">🗺️</span><b>专属成长地图</b><small>1 页纸 · 3 动作</small></div>
     <div class="value-chip"><span class="vc-ico">📘</span><b>一人公司手册</b><small>前 100 位加微赠</small></div>
   </div>
@@ -584,9 +615,9 @@ html,body{background:#0a0b0b;color:#e8ece8}
   <div class="am-backdrop" data-amclose></div>
   <div class="am-card">
     <button class="am-close" data-amclose aria-label="关闭">&times;</button>
-    <div class="am-kicker">ACTIVATE · FREE AI</div>
+    <div class="am-kicker">ACTIVATE · FREE AGNES</div>
     <h3>输入激活码，解锁免费舱</h3>
-    <p class="am-desc">激活码来自加澄导企微后领取的 AI 会员码。输入即免费使用文字大模型 / 文生图 / 文生视频。</p>
+    <p class="am-desc">激活码来自加澄导企微后领取的 Agnes 会员码。输入即免费使用文字大模型 / 文生图 / 文生视频。</p>
     <input class="am-input" id="amInput" placeholder="粘贴你的 Agnes 激活码" autocomplete="off"/>
     <div class="am-err" id="amErr"></div>
     <button class="am-go" id="amGo" onclick="doActivate()">激活并解锁</button>
@@ -1296,7 +1327,7 @@ function renderAtlasGrid(){
   var grid = document.getElementById('atlas-grid'); if(!grid) return;
   var list = _atlasFilter==='all' ? CAREERS : CAREERS.filter(function(c){ return c.cat===_atlasFilter; });
   var html='';
-  list.forEach(function(c){
+  list.forEach(function(c, idx){
     var cat = ATLAS_CATEGORIES.find(function(x){ return x.id===c.cat; });
     var stars=''; for(var i=0;i<5;i++) stars += i<c.difficulty?'★':'☆';
     var riskColor = c.aiRisk==='低'?'#00e676':c.aiRisk==='中'?'#ffc107':'#ff6b6b';
@@ -1309,7 +1340,7 @@ function renderAtlasGrid(){
       '<div class="meta-item"><span class="meta-label">转型难度</span><span class="meta-val">'+stars+'</span></div></div>'+
       '<div class="career-skills">'+c.skills.map(function(s){return '<span class="skill-tag">'+s+'</span>';}).join('')+'</div>'+
       '<div class="career-path"><div class="path-label">📍 学习路径</div><div class="path-steps">'+c.path.map(function(s,i){return '<div class="path-step"><span class="step-num">'+(i+1)+'</span><span>'+s+'</span></div>';}).join('')+'</div></div>'+
-      '<button class="btn btn-outline btn-sm btn-block wechat-trigger" style="margin-top:14px">咨询这个方向 →</button>'+
+      '<button class="btn btn-outline btn-sm btn-block" style="margin-top:14px" onclick="openCareerAdvisor('+idx+')">💬 问 AI 顾问 →</button>'+
     '</div>';
   });
   grid.innerHTML = html;
@@ -1364,7 +1395,7 @@ function renderMoneyGrid(){
   var grid = document.getElementById('money-grid'); if(!grid) return;
   var list = _moneyFilter==='all' ? MONEY_MODELS : MONEY_MODELS.filter(function(m){return m.cat===_moneyFilter;});
   var html='';
-  list.forEach(function(m){
+  list.forEach(function(m, idx){
     var cat = MONEY_CATEGORIES.find(function(x){return x.id===m.cat;});
     var stars=''; for(var i=0;i<5;i++) stars += i<m.difficulty?'★':'☆';
     html += '<div class="career-card money-card">'+
@@ -1379,7 +1410,7 @@ function renderMoneyGrid(){
       '</div>'+
       '<div class="career-skills">'+m.skills.map(function(s){return '<span class="skill-tag">'+s+'</span>';}).join('')+'</div>'+
       '<div class="money-case"><span class="case-icon">📊</span><span>'+m.case+'</span></div>'+
-      '<button class="btn btn-outline btn-sm btn-block wechat-trigger" style="margin-top:14px">咨询这个模式 →</button>'+
+      '<button class="btn btn-outline btn-sm btn-block" style="margin-top:14px" onclick="openMoneyAdvisor('+idx+')">💬 问 AI 顾问 →</button>'+
     '</div>';
   });
   grid.innerHTML = html;
@@ -1449,15 +1480,15 @@ async function getAIMoneyAdvice(){
   var container = document.getElementById('ai-money-advice'); if(!container||!window._lastCalcParams) return;
   var p = window._lastCalcParams;
   if(!agnesIsActive()){
-    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">💡 <b>定制起步建议（离线预览版）</b>：基于你的条件，建议优先尝试系统推荐的 Top1 路径。第一周：花2天学习基础工具，花3天完成第一个最小可行产出，花2天在小红书/抖音发布测试市场反应。先跑通最小闭环，再考虑放大。\n（激活 AI 会员码后，此处将由 AI 实时生成你的专属方案。）</div></div>';
+    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">💡 <b>定制起步建议（离线预览版）</b>：基于你的条件，建议优先尝试系统推荐的 Top1 路径。第一周：花2天学习基础工具，花3天完成第一个最小可行产出，花2天在小红书/抖音发布测试市场反应。先跑通最小闭环，再考虑放大。\n（激活 Agnes 会员码后，此处将由 AI 实时生成你的专属方案。）</div></div>';
     return;
   }
-  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">⏳ AI 正在为你定制专属起步方案…</div></div>';
+  container.innerHTML = '<div class="ai-report-card"><div class="ai-report-body">⏳ Agnes 正在为你定制专属起步方案…</div></div>';
   var topStr = (p.top||[]).map(function(m){return m.title+'（'+m.income+'，启动'+m.invest+'，回本'+m.roi+'）';}).join('；');
   var prompt = '你是OPC-AI商业军师。用户条件：AI技能 '+p.skill+'/4，每周可投入 '+p.time+' 小时，启动资金 '+p.budget+' 元，偏好 '+p.pref+'。\n系统已匹配出最优先的3个变现路径：'+topStr+'。\n请给出：①为什么这3个最适合他；②未来7天第一天的具体动作清单（每天做什么）；③第一个最小闭环怎么跑通。语言简洁，给可执行步骤，不要空话。';
   try{
     var reply = await agnesChat([{role:'user',content:prompt}], 'agnes-1.5-flash');
-    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 军师专属方案（AI 实时生成）</span><button class="copy-btn" onclick="copyText(\'ai-money-advice-content\')">📋 复制</button></div><div class="ai-report-body" id="ai-money-advice-content">'+reply.replace(/\n/g,'<br>')+'</div></div>';
+    container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 AI 军师专属方案（Agnes 实时生成）</span><button class="copy-btn" onclick="copyText(\'ai-money-advice-content\')">📋 复制</button></div><div class="ai-report-body" id="ai-money-advice-content">'+reply.replace(/\n/g,'<br>')+'</div></div>';
     if(typeof opcTrack==='function') opcTrack('tool_money');
   }catch(e){
     container.innerHTML = '<div class="ai-report-card" style="border-color:#ff6b6b"><div class="ai-report-body" style="color:#ff9b9b">⚠️ '+e.message+'</div></div>';
@@ -1549,9 +1580,9 @@ function aiGenerate(promptIdx, resultId){
   container.innerHTML = '<div class="ai-report-card"><div class="ai-report-header"><span class="ai-badge">🤖 已为你组装专属Prompt</span>'+
     '<button class="copy-btn" onclick="copyText(\''+resultId+'-content\')">📋 复制</button></div>'+
     '<div class="ai-report-body" id="'+resultId+'-content">'+final.replace(/\n/g,'<br>')+'</div>'+
-    '<button class="btn btn-primary btn-block" style="margin-top:14px" onclick="agnesGenWorkshop(\''+resultId+'\')">🤖 AI 直接生成文案（免费用）</button>'+
+    '<button class="btn btn-primary btn-block" style="margin-top:14px" onclick="agnesGenWorkshop(\''+resultId+'\')">🤖 用 Agnes 直接生成文案（免费用）</button>'+
     '<div id="'+resultId+'-out" style="margin-top:12px"></div>'+
-    '<div class="ai-report-foot">把以上内容粘贴给任意 AI（DeepSeek/ChatGPT/豆包），即可得到你的专属内容。激活 AI 会员后也可一键由本页直接出稿。</div>'+
+    '<div class="ai-report-foot">把以上内容粘贴给任意 AI（DeepSeek/ChatGPT/豆包），即可得到你的专属内容。激活 Agnes 后也可一键由本页直接出稿。</div>'+
     lockFlowHTML()+
   '</div>';
 }
@@ -1679,6 +1710,126 @@ function generateRadarChart(scores,maxScores){
   for(var i=0;i<n;i++){ var a=-Math.PI/2+(i*2*Math.PI/n); var lr=r+22; var lx=cx+lr*Math.cos(a); var ly=cy+lr*Math.sin(a); html+='<text x="'+lx+'" y="'+ly+'" text-anchor="middle" dominant-baseline="middle" fill="rgba(255,255,255,0.6)" font-size="11">'+dims[i].icon+'</text>'; }
   html+='</svg>';
   return html;
+}
+
+/* =========================================================
+   AI 顾问弹窗（职业图鉴 / 赚钱引擎 通用）
+   战略：让用户先和 AI 直接聊专业问题，加企微放在 AI 聊不下去/未激活兜底
+   避免"每张卡都硬塞加微信"的过频骚扰
+   ========================================================= */
+var _advisorSession = null;
+function _ensureAdvisorModal(){
+  if (document.getElementById('aiAdvisorModal')) return;
+  var div = document.createElement('div');
+  div.id = 'aiAdvisorModal';
+  div.className = 'ai-advisor-modal';
+  div.setAttribute('aria-hidden','true');
+  div.innerHTML =
+    '<div class="ai-advisor-backdrop" data-close></div>'+
+    '<div class="ai-advisor-card">'+
+      '<button class="ai-advisor-close" data-close aria-label="关闭">&times;</button>'+
+      '<div class="ai-advisor-head">'+
+        '<div class="ai-advisor-kicker">🎯 AI 人事总监 · 1v1 咨询</div>'+
+        '<h3 class="ai-advisor-title" id="aiAdvisorTitle">AI 顾问</h3>'+
+        '<p class="ai-advisor-sub" id="aiAdvisorSub">向 AI 顾问提问这个方向</p>'+
+      '</div>'+
+      '<div class="ai-advisor-bubble" id="aiAdvisorBubble"></div>'+
+      '<div class="ai-advisor-input">'+
+        '<textarea id="aiAdvisorInput" rows="2" placeholder="向 AI 顾问提问…（按 Ctrl+Enter 发送）"></textarea>'+
+        '<button class="btn btn-primary" id="aiAdvisorSend">发送</button>'+
+      '</div>'+
+      '<div class="ai-advisor-foot">💡 AI 顾问 7×24 在线 · 一切回答仅供参考</div>'+
+    '</div>';
+  document.body.appendChild(div);
+  div.addEventListener('click', function(e){ if (e.target && e.target.hasAttribute && e.target.hasAttribute('data-close')) _closeAdvisorModal(); });
+  var sendBtn = document.getElementById('aiAdvisorSend');
+  if (sendBtn) sendBtn.addEventListener('click', _advisorSend);
+  var ta = document.getElementById('aiAdvisorInput');
+  if (ta) ta.addEventListener('keydown', function(e){ if (e.key==='Enter' && (e.ctrlKey||e.metaKey)) { e.preventDefault(); _advisorSend(); } });
+}
+function _openAdvisorModal(title, sub, sys){
+  _ensureAdvisorModal();
+  var m = document.getElementById('aiAdvisorModal');
+  if (!m) return;
+  document.getElementById('aiAdvisorTitle').textContent = title;
+  document.getElementById('aiAdvisorSub').textContent = sub;
+  m.classList.add('open');
+  m.setAttribute('aria-hidden','false');
+  _advisorSession = { sys: sys, history: [] };
+  _appendAdvisorBubble('ai', '你好，我是 AI 人事总监「小澄」。关于「'+title+'」有任何问题——技能怎么补、路径怎么走、薪资怎么谈、转型要注意什么——直接问我，3 秒内回。');
+  if (typeof opcTrack==='function') opcTrack('advisor_open', { title: title });
+}
+function _closeAdvisorModal(){
+  var m = document.getElementById('aiAdvisorModal');
+  if (!m) return;
+  m.classList.remove('open');
+  m.setAttribute('aria-hidden','true');
+}
+function _appendAdvisorBubble(role, text){
+  var box = document.getElementById('aiAdvisorBubble');
+  if (!box) return;
+  var b = document.createElement('div');
+  b.className = 'ai-advisor-msg ai-advisor-msg--' + role;
+  var safe = (text==null?'':String(text)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');
+  b.innerHTML = (role==='user' ? '🧑 ' : '🤖 ') + safe;
+  box.appendChild(b);
+  box.scrollTop = box.scrollHeight;
+  return b;
+}
+function _setAdvisorSending(b){
+  var s = document.getElementById('aiAdvisorSend');
+  var t = document.getElementById('aiAdvisorInput');
+  if (s) s.disabled = !!b;
+  if (t) t.disabled = !!b;
+}
+async function _advisorSend(){
+  if (!_advisorSession) return;
+  var ta = document.getElementById('aiAdvisorInput');
+  var txt = (ta && ta.value || '').trim();
+  if (!txt) return;
+  ta.value = '';
+  if (typeof opcUnlocked!=='function' || !opcUnlocked()){
+    _appendAdvisorBubble('ai', '需要先激活才能让 AI 顾问陪你聊下去——在弹窗里输入激活码（或加澄导领），激活后这里对话不限次数。');
+    return;
+  }
+  _appendAdvisorBubble('user', txt);
+  _advisorSession.history.push({ role:'user', content: txt });
+  _setAdvisorSending(true);
+  var thinking = _appendAdvisorBubble('ai', '正在为你定制…');
+  try{
+    var messages = [{ role:'system', content: _advisorSession.sys }].concat(_advisorSession.history);
+    var reply = await opcChat(messages, { model: 'agnes-1.5-flash' });
+    if (thinking && thinking.parentNode) thinking.parentNode.removeChild(thinking);
+    _appendAdvisorBubble('ai', reply || '（AI 没收到回复，请再试一次）');
+    _advisorSession.history.push({ role:'assistant', content: reply || '' });
+  }catch(e){
+    if (thinking && thinking.parentNode) thinking.parentNode.removeChild(thinking);
+    _appendAdvisorBubble('ai', 'AI 顾问掉线了：' + (e && e.message ? e.message : '未知错误') + '。已激活用户重试 1 次就好。');
+  }finally{
+    _setAdvisorSending(false);
+  }
+}
+function openCareerAdvisor(idx){
+  var c = (typeof CAREERS!=='undefined') ? CAREERS[idx] : null;
+  if (!c) return;
+  var sys = '你是「OPC-AI」赛道的资深 AI 人事总监，名叫「小澄」。你正在 1v1 接待一位对「'+c.title+'」感兴趣的人。'+
+    '岗位简介：'+c.desc+'。'+
+    '核心技能：'+c.skills.join('、')+'。'+
+    'AI 替代风险：'+c.aiRisk+'。转型难度：'+c.difficulty+' / 5 星。'+
+    '学习路径：'+c.path.join(' → ')+'。'+
+    '你的回答原则：①精准对接这个岗位的真实情况（不空话）；②给出可执行的具体动作（每周做什么、用什么工具、怎么补技能）；③坦诚说出风险和坑；④语言简洁、有温度、像朋友一样聊。每轮回复 300 字内，不要列表堆叠，能用一段说清就别拆。';
+  _openAdvisorModal(c.title, c.desc.slice(0,60) + (c.desc.length>60?'…':''), sys);
+}
+function openMoneyAdvisor(idx){
+  var m = (typeof MONEY_MODELS!=='undefined') ? MONEY_MODELS[idx] : null;
+  if (!m) return;
+  var sys = '你是「OPC-AI」赛道的资深 AI 商业教练，名叫「小澄」。你正在 1v1 接待一位想了解「'+m.title+'」变现模式的人。'+
+    '模式简介：'+m.desc+'。'+
+    '启动资金：'+m.invest+'，月收入预估：'+m.income+'，回本周期：'+m.roi+'，上手时间：'+m.time+'。'+
+    '核心技能：'+m.skills.join('、')+'。'+
+    '真实案例：'+m.case+'。'+
+    '你的回答原则：①拆解这个模式的真实门槛和关键动作；②给一个 0→1 跑通的具体路径（30 天内能做什么）；③提醒常见坑和失败原因；④语言简洁、有温度、像朋友一样聊。每轮回复 300 字内。';
+  _openAdvisorModal(m.title, m.desc.slice(0,60) + (m.desc.length>60?'…':''), sys);
 }
 
 /* ---------- Tab 切换 + 初始化 ---------- */
